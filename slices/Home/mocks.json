@@ -1,0 +1,111 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"home_text": {
+				"__TYPE__": "FieldContent",
+				"value": "day",
+				"type": "Text"
+			},
+			"shop_text": {
+				"__TYPE__": "FieldContent",
+				"value": "consider",
+				"type": "Text"
+			},
+			"background_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+					"width": 4016,
+					"height": 6016
+				},
+				"url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+				"width": 4016,
+				"height": 6016,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"visual_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Having",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "heading1",
+						"content": {
+							"text": "NEXTJS",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"scroll_text": {
+				"__TYPE__": "FieldContent",
+				"value": "willing",
+				"type": "Text"
+			},
+			"about_text": {
+				"__TYPE__": "FieldContent",
+				"value": "clay",
+				"type": "Text"
+			},
+			"about_description": {
+				"__TYPE__": "FieldContent",
+				"value": "system",
+				"type": "Text"
+			},
+			"work_image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+					"width": 3456,
+					"height": 3456
+				},
+				"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+				"width": 3456,
+				"height": 3456,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"work_description": {
+				"__TYPE__": "FieldContent",
+				"value": "mostly",
+				"type": "Text"
+			},
+			"to_top_text": {
+				"__TYPE__": "FieldContent",
+				"value": "seen",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

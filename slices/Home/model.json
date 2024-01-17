@@ -1,0 +1,93 @@
+{
+  "id": "home",
+  "type": "SharedSlice",
+  "name": "Home",
+  "description": "Home",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "home_text": {
+          "type": "Text",
+          "config": {
+            "label": "Home Text",
+            "placeholder": ""
+          }
+        },
+        "shop_text": {
+          "type": "Text",
+          "config": {
+            "label": "Shop Text",
+            "placeholder": ""
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "visual_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Visual Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading1,strong,em"
+          }
+        },
+        "scroll_text": {
+          "type": "Text",
+          "config": {
+            "label": "Scroll Text",
+            "placeholder": ""
+          }
+        },
+        "about_text": {
+          "type": "Text",
+          "config": {
+            "label": "About Text",
+            "placeholder": ""
+          }
+        },
+        "about_description": {
+          "type": "Text",
+          "config": {
+            "label": "About Description",
+            "placeholder": ""
+          }
+        },
+        "work_image": {
+          "type": "Image",
+          "config": {
+            "label": "Work Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "work_description": {
+          "type": "Text",
+          "config": {
+            "label": "Work Description",
+            "placeholder": ""
+          }
+        },
+        "to_top_text": {
+          "type": "Text",
+          "config": {
+            "label": "To Top Text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
