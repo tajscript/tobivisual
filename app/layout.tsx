@@ -21,9 +21,9 @@ export async function generateMetadata(): Promise<Metadata> {
     title: settings.data.meta_title || "Tobi Adetimehin",
     description: settings.data.meta_description || "I'm a visual artist, and my work serve as a vessel for personal growth, and healing.",
     icons: [{ rel: "icon", url: Favicon.src }],
-    openGraph: {
-      images: [settings.data.og_image.url || ""],
-    },
+    // openGraph: {
+    //   images: [settings.data.og_image.url || ""],
+    // },
   };
 }
 

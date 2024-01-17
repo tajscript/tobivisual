@@ -1,5 +1,10 @@
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
+import Link from "next/link";
+
+import style from "@/styles/home.module.css"
+
 
 /**
  * Props for `Home`.
@@ -14,8 +19,52 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className={style.home}
     >
-      Placeholder component for home (variation: {slice.variation}) Slices
+      <div className={style.wrapper}>
+
+      {/* Hero Section */}
+      <div className={style.home__wrapper}>
+      <nav className={style.nav}>
+        <button className={style.nav__home}>{slice.primary.home_text}</button>
+        <Link href="/" className={style.nav__shop}>{slice.primary.shop_text}</Link>
+      </nav>
+
+      <div className={style.home__content}>
+        <PrismicRichText field={slice.primary.visual_text} />
+        <div className={style.home__background} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}></div>
+      </div>
+
+      <p>{slice.primary.scroll_text}</p>
+      </div>
+
+      {/* About Section */}
+      <div className={style.about__wrapper}>
+        <div className={style.about__details}>
+          <div className={style.about__text}>
+            <h4>{slice.primary.about_text}</h4>
+          </div>
+
+          <div className={style.about__descripton}>
+            <p>{slice.primary.about_description}</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Work Section */}
+      <div className={style.work__wrapper}>
+        <div className={style.work__details}>
+          <PrismicNextImage field={slice.primary.work_image} />
+          <p className={style.work__description}>
+           {slice.primary.work_description}
+          </p>
+        </div>
+
+        <Link href="/">{slice.primary.to_top_text}</Link>
+      </div>
+
+
+      </div>
     </section>
   );
 };

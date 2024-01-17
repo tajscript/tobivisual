@@ -1,0 +1,11 @@
+.home {
+    @apply w-full h-full
+}
+
+.wrapper {
+    @apply block
+}
+
+.home__wrapper {
+    @apply bg-black text-white w-full overflow-hidden h-screen
+}
