@@ -3,5 +3,10 @@
 import dynamic from "next/dynamic";
 
 export const components = {
+  about_slice: dynamic(() => import("./AboutSlice")),
+  art_slice: dynamic(() => import("./ArtSlice")),
+  contact_slice: dynamic(() => import("./ContactSlice")),
   home: dynamic(() => import("./Home")),
+  shop_slice: dynamic(() => import("./ShopSlice")),
+  work_slice: dynamic(() => import("./WorkSlice")),
 };

@@ -1,0 +1,68 @@
+{
+  "id": "featuredart",
+  "label": "FeaturedArt",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      },
+      "amount": {
+        "type": "Text",
+        "config": {
+          "label": "Amount",
+          "placeholder": ""
+        }
+      },
+      "medium": {
+        "type": "Text",
+        "config": {
+          "label": "Medium",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "size": {
+        "type": "Text",
+        "config": {
+          "label": "Size",
+          "placeholder": ""
+        }
+      },
+      "art_type": {
+        "type": "Select",
+        "config": {
+          "label": "Art Type",
+          "placeholder": "",
+          "options": ["Traditional Art", "Digital Prints"]
+        }
+      }
+    }
+  }
+}

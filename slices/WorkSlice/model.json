@@ -1,0 +1,99 @@
+{
+  "id": "work_slice",
+  "type": "SharedSlice",
+  "name": "WorkSlice",
+  "description": "WorkSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "home_text": {
+          "type": "Text",
+          "config": {
+            "label": "Home Text",
+            "placeholder": ""
+          }
+        },
+        "shop_text": {
+          "type": "Text",
+          "config": {
+            "label": "Shop Text",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "type": {
+          "type": "Text",
+          "config": {
+            "label": "Type",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "mission": {
+          "type": "Text",
+          "config": {
+            "label": "Mission",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "art": {
+          "type": "Text",
+          "config": {
+            "label": "Art",
+            "placeholder": ""
+          }
+        },
+        "art_type": {
+          "type": "Text",
+          "config": {
+            "label": "Art Type",
+            "placeholder": ""
+          }
+        },
+        "art_description": {
+          "type": "Text",
+          "config": {
+            "label": "Art Description",
+            "placeholder": ""
+          }
+        },
+        "art_image": {
+          "type": "Image",
+          "config": {
+            "label": "Art Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

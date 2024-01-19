@@ -1,0 +1,98 @@
+{
+  "id": "about_slice",
+  "type": "SharedSlice",
+  "name": "AboutSlice",
+  "description": "AboutSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "home_text": {
+          "type": "Text",
+          "config": {
+            "label": "Home Text",
+            "placeholder": ""
+          }
+        },
+        "shop_text": {
+          "type": "Text",
+          "config": {
+            "label": "Shop Text",
+            "placeholder": ""
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "title_2": {
+          "type": "Text",
+          "config": {
+            "label": "Title 2",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_description": {
+          "type": "Text",
+          "config": {
+            "label": "Image Description",
+            "placeholder": ""
+          }
+        },
+        "visual_text": {
+          "type": "Text",
+          "config": {
+            "label": "Visual Text",
+            "placeholder": ""
+          }
+        },
+        "artist_text": {
+          "type": "Text",
+          "config": {
+            "label": "Artist Text",
+            "placeholder": ""
+          }
+        },
+        "visual_description": {
+          "type": "Text",
+          "config": {
+            "label": "Visual Description",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "footer_image": {
+          "type": "Image",
+          "config": {
+            "label": "Footer Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

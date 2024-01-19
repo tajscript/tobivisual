@@ -1,0 +1,51 @@
+{
+  "id": "shop_slice",
+  "type": "SharedSlice",
+  "name": "ShopSlice",
+  "description": "ShopSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "print": {
+          "type": "Text",
+          "config": {
+            "label": "Print",
+            "placeholder": ""
+          }
+        },
+        "print_2": {
+          "type": "Text",
+          "config": {
+            "label": "Print 2",
+            "placeholder": ""
+          }
+        },
+        "print_3": {
+          "type": "Text",
+          "config": {
+            "label": "Print 3",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "featured": {
+          "type": "Link",
+          "config": {
+            "label": "Featured",
+            "select": "document",
+            "customtypes": [
+              "featuredart"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

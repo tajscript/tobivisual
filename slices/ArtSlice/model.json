@@ -1,0 +1,72 @@
+{
+  "id": "art_slice",
+  "type": "SharedSlice",
+  "name": "ArtSlice",
+  "description": "ArtSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "home_text": {
+          "type": "Text",
+          "config": {
+            "label": "Home Text",
+            "placeholder": ""
+          }
+        },
+        "shop_text": {
+          "type": "Text",
+          "config": {
+            "label": "Shop Text",
+            "placeholder": ""
+          }
+        },
+        "digital_text": {
+          "type": "Text",
+          "config": {
+            "label": "Digital Text",
+            "placeholder": ""
+          }
+        },
+        "art_text": {
+          "type": "Text",
+          "config": {
+            "label": "Art Text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Image 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_3": {
+          "type": "Image",
+          "config": {
+            "label": "Image 3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}
