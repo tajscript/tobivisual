@@ -31,7 +31,9 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       </nav>
 
       <div className={style.home__content}>
+        <div className={style.home__title}>
         <PrismicRichText field={slice.primary.visual_text} />
+        </div>
         <div className={style.home__background} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}></div>
       </div>
 
@@ -54,13 +56,15 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       {/* Work Section */}
       <div className={style.work__wrapper}>
         <div className={style.work__details}>
-          <PrismicNextImage field={slice.primary.work_image} />
+          <div className={style.work__image}>
+          <PrismicNextImage field={slice.primary.work_image} className={style.image} />
+          </div>
+
           <p className={style.work__description}>
            {slice.primary.work_description}
           </p>
         </div>
 
-        <Link href="/">{slice.primary.to_top_text}</Link>
       </div>
 
 
