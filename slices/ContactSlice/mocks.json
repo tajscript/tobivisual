@@ -22,6 +22,16 @@
 				"__TYPE__": "FieldContent",
 				"value": "fought",
 				"type": "Text"
+			},
+			"home_text": {
+				"__TYPE__": "FieldContent",
+				"value": "tube",
+				"type": "Text"
+			},
+			"shop_nav_text": {
+				"__TYPE__": "FieldContent",
+				"value": "boat",
+				"type": "Text"
 			}
 		},
 		"items": [

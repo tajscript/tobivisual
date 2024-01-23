@@ -1,5 +1,6 @@
-import { Content } from "@prismicio/client";
+import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
+import { createClient } from "@/prismicio";
 
 /**
  * Props for `ShopSlice`.
@@ -9,13 +10,36 @@ export type ShopSliceProps = SliceComponentProps<Content.ShopSliceSlice>;
 /**
  * Component for "ShopSlice" Slices.
  */
-const ShopSlice = ({ slice }: ShopSliceProps): JSX.Element => {
+const ShopSlice = async ({ slice }: ShopSliceProps): Promise<JSX.Element> => {
+
+  const client = createClient();
+
+  const products = await Promise.all(
+    slice.items.map((item) => {
+      if (
+        isFilled.contentRelationship(item.featured) && item.featured.uid
+        ) {
+          return client.getByUID("featuredart", item.featured.uid)
+        }
+    })
+  )
+
+  console.log(products)
+
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      Placeholder component for shop_slice (variation: {slice.variation}) Slices
+
+      <div>
+        {products.map((item, index) => item && (
+          <div key={index}>
+            {item.data.title}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

@@ -800,6 +800,26 @@ export type ArtSliceSlice = prismic.SharedSlice<
  */
 export interface ContactSliceSliceDefaultPrimary {
   /**
+   * Home Text field in *ContactSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_slice.primary.home_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_text: prismic.KeyTextField;
+
+  /**
+   * Shop Nav Text field in *ContactSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact_slice.primary.shop_nav_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  shop_nav_text: prismic.KeyTextField;
+
+  /**
    * Title field in *ContactSlice → Primary*
    *
    * - **Field Type**: Text
