@@ -34,13 +34,34 @@
             "thumbnails": []
           }
         },
+        "background_image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_image_3": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image 3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "visual_text": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Visual Text",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "heading1,strong,em"
+            "placeholder": ""
+          }
+        },
+        "artist_text": {
+          "type": "Text",
+          "config": {
+            "label": "Artist Text",
+            "placeholder": ""
           }
         },
         "scroll_text": {

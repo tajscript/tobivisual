@@ -37,25 +37,9 @@
 				"thumbnails": {}
 			},
 			"visual_text": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Having",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "heading1",
-						"content": {
-							"text": "NEXTJS",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
+				"__TYPE__": "FieldContent",
+				"value": "tea",
+				"type": "Text"
 			},
 			"scroll_text": {
 				"__TYPE__": "FieldContent",
@@ -104,6 +88,53 @@
 				"__TYPE__": "FieldContent",
 				"value": "seen",
 				"type": "Text"
+			},
+			"artist_text": {
+				"__TYPE__": "FieldContent",
+				"value": "creature",
+				"type": "Text"
+			},
+			"background_image_2": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+					"width": 3199,
+					"height": 3199
+				},
+				"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+				"width": 3199,
+				"height": 3199,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			},
+			"background_image_3": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+				"width": 3168,
+				"height": 4752,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
 			}
 		},
 		"items": []

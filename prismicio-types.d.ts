@@ -950,14 +950,44 @@ export interface HomeSliceDefaultPrimary {
   background_image: prismic.ImageField<never>;
 
   /**
+   * Background Image 2 field in *Home → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.primary.background_image_2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image_2: prismic.ImageField<never>;
+
+  /**
+   * Background Image 3 field in *Home → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.primary.background_image_3
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image_3: prismic.ImageField<never>;
+
+  /**
    * Visual Text field in *Home → Primary*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: home.primary.visual_text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  visual_text: prismic.RichTextField;
+  visual_text: prismic.KeyTextField;
+
+  /**
+   * Artist Text field in *Home → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.primary.artist_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  artist_text: prismic.KeyTextField;
 
   /**
    * Scroll Text field in *Home → Primary*
