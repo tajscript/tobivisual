@@ -4,6 +4,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import style from "@/styles/about.module.css";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
+import { TbAsterisk } from "react-icons/tb";
 
 /**
  * Props for `AboutSlice`.
@@ -43,17 +44,16 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
           </div>
 
           <div className={style.visual__container}>
-            <div className={style.visual__wrapper}>
-            <div className={style.visual__text}>
-              <h3>{slice.primary.visual_text}</h3>
-              <h3>{slice.primary.artist_text}</h3>
-            </div>
+              <div className={style.visual__text}>
+                <h3>{slice.primary.visual_text}</h3>
+                <h3 className={style.visual__text_r}>{slice.primary.artist_text}</h3>
+              </div>
 
-            <div className={style.icon}></div>
             <div className={style.visual__description}>
+              <div className={style.icon}>
+                <TbAsterisk />
+              </div>
               <p>{slice.primary.visual_description}</p>
-            </div>
-
             </div>
           </div>
 
@@ -63,7 +63,7 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
             </div>
 
             <div className={style.detail__image}>
-            <PrismicNextImage field={slice.primary.footer_image} className={style.l__image} />
+              <PrismicNextImage field={slice.primary.footer_image} className={style.r__image} />
             </div>
           </div>
         </div>
