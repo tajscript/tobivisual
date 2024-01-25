@@ -9,11 +9,3 @@
 html {
   @apply scroll-smooth
 }
-
-body {
-  @apply font-grotesk
-}
-
-nav {
-    @apply h-[6%] bg-transparent text-lg font-medium flex items-center justify-between px-3 sm:px-5 md:h-[10%] xl:px-20
-}

@@ -27,14 +27,24 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       <div className={style.home__wrapper}>
       <nav className={style.nav}>
         <button className={style.nav__home}>{slice.primary.home_text}</button>
+          <div className={style.real__time}>[ Abuja, 04:12 ]</div>
         <Link href="/" className={style.nav__shop}>{slice.primary.shop_text}</Link>
       </nav>
 
+      <div className={style.home__container}>
       <div className={style.home__content}>
         <div className={style.home__title}>
-        <PrismicRichText field={slice.primary.visual_text} />
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
         </div>
-        <div className={style.home__background} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}></div>
+
+        <div className={style.home__background} style={{ backgroundImage: 'url(' + slice.primary.background_image_2.url + ')' }}>
+        <div className={style.home__background_wrapper} style={{ backgroundImage: 'url(' + slice.primary.background_image_3.url + ')' }}>
+        <div className={style.home__background_inner} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}>
+        </div>
+        </div>
+        </div>
+      </div>
       </div>
 
       <p>{slice.primary.scroll_text}</p>
@@ -59,10 +69,15 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
           <div className={style.work__image}>
           <PrismicNextImage field={slice.primary.work_image} className={style.image} />
           </div>
-
-          <p className={style.work__description}>
-           {slice.primary.work_description}
-          </p>
+          
+          <div className={style.work__description}>
+          <div className={style.work__line} />
+            <p>
+            {slice.primary.work_description}
+            </p>
+          <div className={style.work__line} />
+          </div>
+          
         </div>
 
       </div>

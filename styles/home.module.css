@@ -6,30 +6,50 @@
     @apply block relative w-full h-full overflow-hidden uppercase
 }
 
+.nav {
+    @apply h-[6%] bg-transparent font-grotesk sm:text-lg flex items-center justify-between px-3 sm:px-5 md:h-[10%] xl:px-20
+}
+
 .home__wrapper {
     @apply bg-black text-white w-full overflow-hidden h-screen flex justify-between flex-col
 }
 
 .home__wrapper p {
-    @apply h-[5%] w-full flex items-end justify-end p-2 text-sm xl:p-3
+    @apply h-[5%] w-full flex font-grotesk items-end justify-end p-2 text-sm xl:p-3
+}
+
+.home__container {
+    @apply w-full h-full flex items-center justify-center
 }
 
 .home__content {
-    @apply flex flex-col pt-10 w-full h-[80%] md:flex-row md:items-end md:pl-5 md:gap-5 xl:pl-20 md:py-16 xl:pt-10 xl:pb-0
+    @apply w-80 sm:w-96 flex flex-col gap-2 font-raleway justify-center items-center sm:flex-col-reverse
 }
 
 .home__background {
-    @apply w-full h-full bg-cover bg-no-repeat bg-center
+    @apply w-full h-80 bg-cover bg-center bg-no-repeat -rotate-12 sm:h-96
 }
 
-.home__title { 
-    @apply text-5xl font-semibold pl-3 md:pl-0 lg:text-7xl xl:text-8xl
+.home__background_wrapper {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat -rotate-6
+}
+
+.home__background_inner {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat rotate-[17.5deg]
+}
+
+.home__title {
+    @apply w-full text-6xl z-10 font-semibold flex flex-col sm:text-7xl
+}
+
+.home__text_r {
+    @apply flex w-full justify-end
 }
 
 
 /* About Styling */
 .about__wrapper {
-    @apply h-screen w-full bg-offgray flex items-center px-3 sm:px-5 xl:px-20
+    @apply h-screen font-grotesk w-full bg-offgray flex items-center px-3 sm:px-5 xl:px-20
 }
 
 .about__details {
@@ -37,30 +57,38 @@
 }
 
 .about__text {
-    @apply bg-offwhite text-offgray w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg
+    @apply border border-offwhite text-offwhite w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg transition-all hover:bg-offwhite hover:text-offgray duration-200 ease-linear
 }
 
 .about__descripton {
-    @apply w-full text-offwhite text-sm lg:w-[70%] sm:text-base lg:text-lg xl:w-[50%]
+    @apply w-full text-offwhite text-sm lg:w-[70%] sm:text-base lg:text-lg
 }
 
 /* Work Styling */
 .work__wrapper {
-    @apply h-full w-full pt-20 xl:pr-10 md:pt-32
+    @apply h-full w-full pt-20 xl:pr-10 md:pt-32 xl:pt-48 font-grotesk
 }
 
 .work__details {
-    @apply flex flex-col-reverse gap-20 md:gap-10 md:flex-row md:items-center xl:gap-0
+    @apply flex flex-col-reverse gap-20 md:gap-10 md:flex-row xl:gap-0
 }
 
 .work__image {
-    @apply w-full md:w-[50%]
+    @apply w-full md:w-[50%] md:mt-80
 }
 
 .work__description {
-    @apply w-full text-sm px-3 sm:text-base md:w-[50%] md:px-5 lg:px-10 xl:px-20 xl:text-lg
+    @apply w-full px-3 md:w-[50%] md:px-5 lg:px-10 xl:px-20  
+}
+
+.work__description p {
+    @apply py-10 text-sm sm:text-base xl:text-lg
 }
 
 .image {
-    @apply w-full xl:w-[40rem] xl:h-[45rem]
+    @apply w-full xl:w-[40rem] xl:h-[42rem]
+}
+
+.work__line {
+    @apply h-1 bg-offgray
 }
