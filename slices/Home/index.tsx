@@ -2,6 +2,7 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
+import Image from "next/image";
 
 import style from "@/styles/home.module.css"
 
@@ -31,23 +32,38 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
         <Link href="/" className={style.nav__shop}>{slice.primary.shop_text}</Link>
       </nav>
 
-      <div className={style.home__container}>
+
       <div className={style.home__content}>
         <div className={style.home__title}>
           <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+        </div>
+        
+        {/* <div className={style.home__background_inner} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}></div> */}
+
+        <div className={style.home__background}>
+            <PrismicNextImage field={slice.primary.background_image_3} className={`${style.background__image} ${style.image__rotate_4}`}/>
+            <PrismicNextImage field={slice.primary.background_image} className={`${style.background__image} ${style.image__rotate_3}`} />
+            <PrismicNextImage field={slice.primary.background_image_3} className={`${style.background__image} ${style.image__rotate_2}`} />
+            <PrismicNextImage field={slice.primary.background_image_2} className={`${style.background__image} ${style.image__rotate_1}`}/>
+            <PrismicNextImage field={slice.primary.background_image} className={`${style.background__image} ${style.image__rotate}`}/>
         </div>
 
-        <div className={style.home__background} style={{ backgroundImage: 'url(' + slice.primary.background_image_2.url + ')' }}>
-        <div className={style.home__background_wrapper} style={{ backgroundImage: 'url(' + slice.primary.background_image_3.url + ')' }}>
-        <div className={style.home__background_inner} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}>
-        </div>
-        </div>
-        </div>
-      </div>
       </div>
 
+      <div className={style.home__description}>
+         <p>I'm Tobi Adetimehin and I'm a visual artist! I make art because it is a powerful catalyst for personal growth and I aspire to share this with others through my work!</p>
+      </div>
+
+      <div className={style.footer__text}>
+      <p>©TOBI ADETIMEHIN</p>
       <p>{slice.primary.scroll_text}</p>
+      </div>
+
       </div>
 
       {/* About Section */}
