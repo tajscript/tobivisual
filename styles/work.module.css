@@ -1,0 +1,75 @@
+.work {
+    @apply w-full h-full
+}
+
+.wrapper {
+    @apply block relative w-full h-full overflow-hidden uppercase
+}
+
+.nav {
+    @apply h-12 font-grotesk font-medium sm:text-lg flex items-center justify-between px-3 sm:px-5 md:h-16 xl:px-20
+}
+
+.container {
+    @apply w-full font-raleway mb-10 px-5 pt-10 h-[90vh] flex gap-5 flex-col sm:px-10 lg:flex-row md:items-center lg:pt-20 xl:px-20 xl:gap-10
+}
+
+.image__wrapper {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat lg:w-[60%] xl:w-[50%]
+}
+
+.details {
+    @apply w-full  flex flex-col items-center lg:w-[40%] xl:w-[50%]
+}
+
+.details h3 {
+    @apply sm:text-lg lg:text-2xl font-semibold
+}
+
+.details > h4 {
+    @apply text-sm text-offgray mb-5
+}
+
+.details > p {
+    @apply text-xs sm:text-sm text-center
+}
+
+.mission__statement {
+    @apply w-full h-screen flex items-center justify-center bg-black text-white px-5
+}
+
+.mission__statement h3 {
+    @apply w-full sm:w-72 font-grotesk text-center
+}
+
+.slices {
+    @apply w-full h-screen relative overflow-y-hidden overflow-x-scroll flex flex-row justify-center items-center
+}
+
+.slice__wrapper {
+    @apply relative py-3 px-5 sm:px-10 min-w-[100vw] w-full flex flex-col items-center justify-between gap-5 lg:flex-row lg:py-20 lg:pr-0 lg:gap-10
+}
+
+.slice__image {
+    @apply w-full lg:w-[60%] xl:w-[50%] lg:py-5 flex justify-center
+}
+
+.image__slice {
+    @apply w-72 sm:w-96 lg:w-full
+}
+
+.slice__details {
+    @apply block text-center h-full lg:w-[40%] xl:w-[50%]
+}
+
+.slice__details h3 {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold
+}
+
+.slice__details h4 {
+    @apply text-sm text-offgray
+}
+
+.slice__details p {
+    @apply text-xs mt-2 sm:text-sm lg:text-base 
+}

@@ -26,13 +26,12 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
         </nav>
 
         <div className={style.container}>
-          <div className={style.image__wrapper}>
-          <PrismicNextImage field={slice.primary.image} className={style.featured__image} />
-          </div>
           <div className={style.details}>
             <h3>{slice.primary.title}</h3>
             <h4>{slice.primary.type}</h4>
             <p>{slice.primary.description}</p>
+          </div>
+          <div className={style.image__wrapper} style={{ backgroundImage: 'url(' + slice.primary.image.url + ')' }}>
           </div>
         </div>
 
@@ -43,14 +42,13 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
         <div className={style.slices}>
           {slice.items.map((item, index) => (
           <div className={style.slice__wrapper} key={index}>
-            <div className={style.slice__text}>
+            <div className={style.slice__details}>
               <h3>{item.art}</h3>
               <h4>{item.art_type}</h4>
-
               <p>{item.art_description}</p>
             </div>
             <div className={style.slice__image}>
-            <PrismicNextImage field={item.art_image} className={style.image} />
+            <PrismicNextImage field={item.art_image} className={style.image__slice} />
             </div>
           </div>
           ))}
