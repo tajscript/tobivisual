@@ -1,0 +1,63 @@
+.shop {
+    @apply w-full h-[89vh] overflow-hidden font-grotesk relative
+}
+
+.wrapper {
+    @apply w-full h-full flex flex-col justify-between
+}
+
+.total__number {
+    @apply font-semibold text-xl font-cute pl-3 sm:pl-5 mt-2 sm:text-2xl lg:pl-10
+}
+
+.title__wrapper {
+    @apply relative w-full mt-5 sm:mt-10
+}
+
+.title__display {
+    @apply text-center relative text-4xl px-3 sm:text-5xl lg:text-6xl 
+}
+
+.title__container {
+    @apply absolute w-full flex justify-between flex-row sm:flex-col sm:top-0 sm:right-0 sm:gap-1 sm:w-32 px-3 sm:px-0
+}
+
+.button {
+    @apply cursor-pointer text-sm mt-2 sm:mt-0 transition-all flex gap-1 font-bold items-center
+}
+
+.button p {
+    @apply sm:transition-all sm:duration-500 sm:hover:px-2 sm:ease-in-out font-normal text-sm
+}
+
+.product {
+    @apply mt-10
+}
+
+.button__container {
+    @apply hidden w-full sm:flex flex-row gap-1 justify-end px-5
+}
+
+.product__button {
+    @apply font-semibold text-2xl transition-colors duration-200 delay-100 ease-in-out hover:bg-black hover:text-white
+}
+
+.product__wrapper {
+    @apply pl-3 mt-10 mb-10 flex flex-row gap-2 sm:pl-10 sm:mt-2 sm:gap-4 lg:gap-5
+}
+
+.product__index {
+    @apply min-w-64 cursor-pointer lg:min-w-72
+}
+
+.image {
+    @apply w-full h-80 lg:h-[22rem]
+}
+
+.product__index h3 {
+    @apply text-sm sm:text-base
+}
+
+.product__index h4 {
+    @apply font-bold text-sm sm:text-base
+}
