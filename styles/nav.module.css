@@ -1,0 +1,19 @@
+.nav {
+    @apply w-full relative border-b-2 border-black px-2 sm:px-5 lg:px-10
+}
+
+.wrapper {
+    @apply flex flex-row justify-between h-[5vh] items-center font-grotesk
+}
+
+.button {
+    @apply cursor-pointer
+}
+
+.button span {
+    @apply font-semibold
+}
+
+.footer {
+    @apply w-full relative border-t-2 border-black px-2
+}
