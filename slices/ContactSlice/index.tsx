@@ -34,21 +34,22 @@ const ContactSlice = ({ slice }: ContactSliceProps): JSX.Element => {
             <h4>{slice.primary.email}</h4>
           </div>
 
+          <div className={style.social__container}>
           <div className={style.social__wrapper}>
             {
               slice.items.map((item, index) => (
-                <div key={index} className={style.socials}>
                   <PrismicNextLink field={item.link} className={style.social}>
                     {item.label}
                   </PrismicNextLink>
-                </div>
               ))
             }
           </div>
 
           <div className={style.shop__wrapper}>
-            <Link href="/" className={style.shop__link}>{slice.primary.shop_text}</Link>
+            <Link href="/" className={style.social}>{slice.primary.shop_text}</Link>
           </div>
+          </div>
+
         </div>
 
       </div>
