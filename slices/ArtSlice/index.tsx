@@ -3,7 +3,9 @@ import { SliceComponentProps } from "@prismicio/react";
 
 import style from "@/styles/art.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { PrismicNextImage } from "@prismicio/next";
+import bg from "@/public/assets/favicon.ico"
 
 /**
  * Props for `ArtSlice`.
@@ -32,20 +34,22 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
             <h4>ART</h4>
           </div>
 
+          <div className={style.body__wrapper}>
           <div className={style.image__wrapper}>
             {slice.items.map((item, index) => (
               <div className={style.image__container} key={index}>
-                <div className={style.images}>
                 <PrismicNextImage field={item.image} className={style.image}/>
-                </div>
-                <div className={style.images}>
-                <PrismicNextImage field={item.image_2} className={style.image}/>
-                </div>
-                <div className={style.images}>
-                <PrismicNextImage field={item.image_3} className={style.image}/>
-                </div>
               </div>
             ))}
+          </div>
+
+
+          <div className={style.image__display}>
+            <div className={style.display__wrapper}>
+              <Image src={bg.src} width={500} height={500} alt="Display Digital ART" className={style.images}></Image>
+            </div>
+          </div>
+
           </div>
         </div>
       </div>
