@@ -1,0 +1,147 @@
+.slug {
+    @apply w-full min-h-[89vh] sm:min-h-[89vh] xl:overflow-hidden font-grotesk relative
+}
+
+.cart {
+    @apply absolute z-50 w-full -top-10 right-0 h-screen overflow-hidden
+}
+
+.cart__wrapper {
+    @apply fixed bg-white px-3 sm:px-5 h-full w-72 right-0 sm:w-96 lg:w-[26rem]
+}
+
+.cart__nav {
+    @apply w-full flex flex-row items-center justify-between h-[5vh]
+}
+
+.cart__container {
+    @apply mt-5 h-screen flex flex-col justify-between pb-24
+}
+
+.cart__checkout {
+    @apply h-[40rem] w-full space-y-2
+}
+
+.cart__review {
+    @apply flex flex-row gap-5 w-full
+}
+
+.cart__images {
+    @apply w-24 h-24
+}
+
+.cart__details {
+    @apply block
+}
+
+.cart__details h3 {
+    @apply text-xs font-medium sm:text-sm
+}
+
+.cart__details > p {
+    @apply text-sm text-gray-500
+}
+
+.cart__details h4 {
+    @apply font-bold
+}
+
+.crement {
+    @apply mt-1 mb-2 flex flex-row gap-2 justify-between items-center bg-offgray text-offwhite w-20 px-1
+}
+
+.crement p {
+    @apply text-lg font-semibold
+}
+
+.crement button {
+    @apply text-sm
+}
+
+.remove__button {
+    @apply w-full text-sm underline text-end
+}
+
+.checkout {
+    @apply block space-y-3 w-full
+}
+
+.checkout__wrapper {
+    @apply flex flex-row justify-between mb-2 items-center w-full
+}
+
+.checkout__wrapper h5 {
+    @apply font-semibold text-lg
+}
+
+.checkout__button {
+    @apply bg-black border border-black text-white flex items-center w-full justify-center h-8 text-sm transition-colors duration-300 ease-in-out hover:bg-white hover:text-black
+}
+
+.wrapper {
+    @apply w-full px-3 py-5 gap-2 sm:gap-5 sm:p-10 lg:px-20 h-full flex flex-col items-center justify-center xl:flex-row
+}
+
+.image__wrapper {
+    @apply w-full xl:w-[50%] flex items-center justify-center
+}
+
+.image {
+    @apply w-full h-auto sm:w-[22rem] lg:w-96 xl:w-[28rem]
+}
+
+.details {
+    @apply w-full flex flex-col xl:flex-col-reverse items-center xl:w-[50%] xl:gap-10
+}
+
+.title {
+    @apply text-center block sm:text-left w-full
+}
+
+.title h3 {
+    @apply font-semibold sm:text-lg
+}
+
+.title p {
+    @apply text-sm sm:text-base text-gray-600
+}
+
+.description {
+    @apply mt-5 flex gap-2 flex-col items-center lg:mt-0
+}
+
+.form {
+    @apply block w-56 lg:w-64
+}
+
+.form h3 {
+    @apply lg:text-lg mb-4 text-center
+}
+
+.input__wrapper {
+    @apply border-b-2 border-black flex flex-row justify-between items-center w-full mb-2 lg:mb-3
+}
+
+.input__wrapper {
+    @apply text-sm sm:text-base
+}
+
+.input__container {
+    @apply border border-b-0 border-black w-20 relative hover:bg-black hover:text-white lg:w-28
+}
+
+.input__container label {
+    @apply flex items-center justify-center cursor-pointer z-10
+}
+
+.input__container input {
+    @apply absolute top-0 w-full h-full cursor-pointer appearance-none
+}
+
+.input__container input[type="radio"]:checked {
+    @apply bg-black
+}
+
+.button {
+    @apply w-full mt-3 bg-black border border-black text-white text-sm rounded-full transition-colors h-7 lg:h-9 lg:mt-4 duration-300 ease-in-out hover:bg-white hover:text-black mb-10 lg:mb-0
+}
