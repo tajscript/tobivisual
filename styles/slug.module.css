@@ -1,5 +1,5 @@
 .slug {
-    @apply w-full min-h-[89vh] sm:min-h-[89vh] xl:overflow-hidden font-grotesk relative
+    @apply w-full min-h-[89vh] xl:overflow-hidden font-grotesk relative
 }
 
 .cart {
@@ -7,11 +7,11 @@
 }
 
 .cart__wrapper {
-    @apply fixed bg-white px-3 sm:px-5 h-full w-72 right-0 sm:w-96 lg:w-[26rem]
+    @apply fixed bg-white px-3 sm:px-5 h-full w-full right-0 sm:w-96 lg:w-[26rem]
 }
 
 .cart__nav {
-    @apply w-full flex flex-row items-center justify-between h-[5vh]
+    @apply w-full pt-2 flex flex-row items-center justify-between h-[5vh]
 }
 
 .cart__container {
