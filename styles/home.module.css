@@ -59,7 +59,7 @@
 }
 
 .home__description p {
-    @apply w-full text-center sm:w-[55%] lg:w-[40%]
+    @apply w-full text-center sm:uppercase sm:w-[55%] lg:w-[40%]
 }
 
 /* About Styling */

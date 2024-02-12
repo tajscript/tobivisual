@@ -743,26 +743,6 @@ export interface ArtSliceSliceDefaultItem {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
-
-  /**
-   * Image 2 field in *ArtSlice → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: art_slice.items[].image_2
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_2: prismic.ImageField<never>;
-
-  /**
-   * Image 3 field in *ArtSlice → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: art_slice.items[].image_3
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_3: prismic.ImageField<never>;
 }
 
 /**

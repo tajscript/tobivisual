@@ -1,5 +1,5 @@
 .nav {
-    @apply w-full relative border-b-2 border-black px-2 sm:px-5 lg:px-10
+    @apply w-full border-b-2 border-black px-2 sm:px-5 lg:px-10 relative
 }
 
 .wrapper {
@@ -11,9 +11,17 @@
 }
 
 .button span {
-    @apply font-semibold
+    @apply font-semibold font-cute
 }
 
 .footer {
-    @apply w-full relative border-t-2 border-black px-2
+    @apply w-full relative border-t-2 border-black px-2 text-sm
+}
+
+.accountNav {
+    @apply h-[5vh] border-b-2 border-black flex items-center justify-center w-full 
+}
+
+.accountNav h3 {
+    @apply font-semibold
 }

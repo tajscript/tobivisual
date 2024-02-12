@@ -49,22 +49,6 @@
             "constraint": {},
             "thumbnails": []
           }
-        },
-        "image_2": {
-          "type": "Image",
-          "config": {
-            "label": "Image 2",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "image_3": {
-          "type": "Image",
-          "config": {
-            "label": "Image 3",
-            "constraint": {},
-            "thumbnails": []
-          }
         }
       }
     }

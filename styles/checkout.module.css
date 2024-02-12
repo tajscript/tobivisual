@@ -51,7 +51,7 @@
 }
 
 .wrapper h5 span {
-    @apply text-blue-600 font-semibold
+    @apply font-semibold
 }
 
 .form {
@@ -75,5 +75,5 @@
 }
 
 .contact button {
-    @apply bg-black text-white w-full h-8 mt-2 sm:mt-4 xl:w-[30rem]
+    @apply bg-black text-sm border border-black transition-colors duration-300 ease-in-out text-white w-full h-8 mt-2 sm:mt-4 xl:w-[30rem] hover:bg-white hover:text-black
 }

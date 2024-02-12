@@ -56,7 +56,7 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       </div>
 
       <div className={style.home__description}>
-         <p>I'm Tobi Adetimehin and I'm a visual artist! I make art because it is a powerful catalyst for personal growth and I aspire to share this with others through my work!</p>
+         <p>I'm Tobi Adetimehin, a visual artist. I make art because it is a powerful catalyst for personal growth and I aspire to share this with others through my work!</p>
       </div>
 
       <div className={style.footer__text}>

@@ -13,7 +13,8 @@ const config: Config = {
       },
       fontFamily: {
         grotesk: ['var(--font-grotesk)'],
-        raleway: ['var(--font-raleway)']
+        raleway: ['var(--font-raleway)'],
+        cute: ['var(--font-cute)'],
       },
       colors: {
         'offgray': '#333333',

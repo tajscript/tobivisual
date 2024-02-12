@@ -1,0 +1,47 @@
+.account {
+    @apply w-full h-[89vh] flex items-center justify-center px-5 sm:px-10 py-10
+}
+
+.wrapper {
+    @apply flex flex-col w-full sm:w-72 lg:w-80
+}
+
+.wrapper h3 {
+    @apply text-xl sm:text-2xl text-center font-semibold
+}
+
+.wrapper h3 span {
+    @apply uppercase
+}
+
+.wrapper p {
+    @apply text-sm text-center
+}
+
+.wrapper p span {
+    @apply font-semibold
+}
+
+.form {
+    @apply flex flex-col mt-5 mb-2
+}
+
+.form label {
+    @apply text-sm
+}
+
+.form input {
+    @apply bg-gray-300 h-8 mb-2 focus:outline-none px-1
+}
+
+.form button {
+    @apply w-full bg-black text-white h-8 mt-3 border-black border transition-colors duration-300 ease-in-out hover:bg-white hover:text-black text-sm
+}
+
+.link {
+    @apply cursor-pointer text-sm pt-10 sm:mt-0 transition-all flex gap-1 font-bold items-center justify-center
+}
+
+.link p {
+    @apply sm:transition-all sm:duration-500 sm:hover:px-2 sm:ease-in-out font-normal text-sm
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
 import { Raleway } from 'next/font/google';
+import { Cute_Font } from 'next/font/google';
 import '@/styles/globals.css'
 import { createClient } from '@/prismicio';
 
@@ -11,6 +12,13 @@ const grotesk = Space_Grotesk({
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-grotesk',
+})
+
+const cute = Cute_Font({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-cute',
 })
 
 const raleway = Raleway({
@@ -42,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${grotesk.variable} ${raleway.variable}`}>{children}</body>
+      <body className={`${grotesk.variable} ${raleway.variable} ${cute.variable}`}>{children}</body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ const footer = () => {
     <footer className={style.footer}>
         <div className={style.wrapper}>
             <div className={style.link}>©TOBI ADETIMEHIN</div>
-            <div className={style.link}>Made by <span><Link href="" target="_blank">TAJ</Link></span></div>
+            <div className={style.link}>MADE BY - <span><Link href="" target="_blank">TAJ</Link></span></div>
         </div>
     </footer>
   )

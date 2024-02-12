@@ -38,7 +38,7 @@ const ContactSlice = ({ slice }: ContactSliceProps): JSX.Element => {
           <div className={style.social__wrapper}>
             {
               slice.items.map((item, index) => (
-                  <PrismicNextLink field={item.link} className={style.social}>
+                  <PrismicNextLink field={item.link} key={index} className={style.social}>
                     {item.label}
                   </PrismicNextLink>
               ))
