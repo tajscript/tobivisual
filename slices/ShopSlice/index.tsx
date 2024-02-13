@@ -1,3 +1,5 @@
+"use client"
+
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { createClient } from "@/prismicio";
@@ -7,31 +9,43 @@ import { PrismicNextImage } from "@prismicio/next";
 import { BsChevronRight } from "react-icons/bs";
 import { BsChevronLeft } from "react-icons/bs";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
+export type ShopSliceProps = SliceComponentProps<Content.ShopSliceSlice>
 
-/**
- * Props for `ShopSlice`.
- */
-export type ShopSliceProps = SliceComponentProps<Content.ShopSliceSlice>;
-
-/**
- * Component for "ShopSlice" Slices.
- */
 const ShopSlice = async ({ slice }: ShopSliceProps): Promise<JSX.Element> => {
+  const [products, setProducts] = useState<any[]>([])
+  const [filteredProducts, setFilteredProducts] = useState<any[]>([]);
 
-  const client = createClient();
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const client = createClient();
 
-  const products = await Promise.all(
-    slice.items.map((item) => {
-      if (
-        isFilled.contentRelationship(item.featured) && item.featured.uid
-        ) {
-          return client.getByUID("featuredart", item.featured.uid)
-        }
-    })
-  )
+      const fetchedProducts = await Promise.all(
+        slice.items.map((item) => {
+          if (
+            isFilled.contentRelationship(item.featured) && item.featured.uid
+            ) {
+              return client.getByUID("featuredart", item.featured.uid)
+            }
+        })
+      );
+      setFilteredProducts(fetchedProducts);
+      setProducts(fetchedProducts);
+    }
+    fetchProducts();
+  }, [])
 
-  // console.log(products)
+  // Filter Product according to Art type
+  const filterProduct = (type: string) => {
+    if(type === "All") {
+      setFilteredProducts(products)
+    } else if(type === "Traditional Art") {
+      setFilteredProducts(products.filter((product) => product?.data.art_type === "Traditional Art"))
+    } else if(type === "Digital Prints") {
+      setFilteredProducts(products.filter((product) => product?.data.art_type === "Digital Prints"))
+    }
+  }
 
 
   return (
@@ -47,9 +61,17 @@ const ShopSlice = async ({ slice }: ShopSliceProps): Promise<JSX.Element> => {
         <div className={style.title__display}>ARTWORKS</div>
 
         <div className={style.title__container}>
-          <button className={style.button}>[ <p>{slice.primary.print}</p> ]</button>
-          <button className={style.button}>[ <p>DIGITAL</p> ]</button>
-          <button className={style.button}>[ <p>TRADITIONAL</p> ]</button>
+          <button className={style.button} onClick={() => filterProduct("All")}>
+            [ <p>{slice.primary.print}</p> ]
+            </button>
+
+          <button className={style.button} onClick={() => filterProduct("Digital Prints")}>
+            [ <p>{slice.primary.print_2}</p> ]
+            </button>
+
+          <button className={style.button} onClick={() => filterProduct("Traditional Art")}>
+            [ <p>{slice.primary.print_3}</p> ]
+            </button>
         </div>
         </div>
 
@@ -63,7 +85,7 @@ const ShopSlice = async ({ slice }: ShopSliceProps): Promise<JSX.Element> => {
           </button>
         </div>
       <div className={style.product__wrapper}>
-          {products.map((item, index) => item && (
+          {filteredProducts?.map((item, index) => item && (
             <Link href="" key={index} className={style.product__index}>
               <PrismicNextImage field={item.data.image} className={style.image} />
               <h3>{item.data.title}</h3>
@@ -80,3 +102,5 @@ const ShopSlice = async ({ slice }: ShopSliceProps): Promise<JSX.Element> => {
 };
 
 export default ShopSlice;
+
+
