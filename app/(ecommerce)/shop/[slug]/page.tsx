@@ -1,71 +1,29 @@
+"use client"
+
 import style from "@/styles/slug.module.css";
 import Image from "next/image";
-import bg from "@/public/assets/girl.jpg";
-import { LiaTimesSolid } from "react-icons/lia";
-import { FiMinus } from "react-icons/fi";
-import { FiPlus } from "react-icons/fi";
-import Link from "next/link";
+import { createClient } from "@/prismicio";
+import Cart from "@/components/cart";
 
 
-const page = ({ params }: { params: { slug: string } }) => {
+const page = async ({ params }: { params: { slug: string } }) => {
+    const client = createClient();
+
+    const product = await client.getByUID("featuredart", params.slug)
+
+    const increaseAmount = (product.data.amount as number);
+
   return (
     <section className={style.slug}>
-        <div className={style.cart}>
-            <div className={style.cart__wrapper}>
-                <div className={style.cart__nav}>
-                    <p>YOUR CART</p>
-                    <button className={style.cart__icon}>
-                        <LiaTimesSolid />
-                    </button>
-                </div>
-
-                <div className={style.cart__container}>
-                    <div className={style.cart__checkout}>
-                        <div className={style.cart__review}>
-                        <div className={style.cart__images}>
-                            <Image src={bg.src} alt="Product Image" width={300} height={300} className={style.cart__image}></Image>
-                        </div>
-
-                        <div className={style.cart__details}>
-                            <h3>TELL THE WOLVES I AM HOME</h3>
-                            <p>4 x 5</p>
-                            <h4>${25}</h4>
-
-                            <div className={style.crement}>
-                                <button><FiMinus /></button>
-                                <p>{1}</p>
-                                <button><FiPlus /></button>
-                            </div>
-
-                            <button className={style.remove__button}>Remove</button>
-                        </div>
-                        </div>
-                    </div>
-
-                    <footer className={style.checkout}>
-                        <div className={style.checkout__wrapper}>
-                            <p>Subtotal:</p>
-                            <h5>${20}</h5>
-                        </div>
-
-                        <Link href="/" className={style.checkout__button}>
-                            CHECKOUT
-                        </Link>
-                    </footer>
-
-                </div>
-
-            </div>
-        </div>
-
-        {/* {params.slug} */}
+        <Cart />
         <div className={style.wrapper}>
         <div className={style.image__wrapper}>
-            <Image src={bg.src} alt="Product Image" width={300} height={300} className={style.image}></Image>
+            <Image src={product.data.image.url || ""} alt="Product Image" width={500} height={500} className={style.image}></Image>
         </div>
 
         <div className={style.details}>
-            <form className={style.form}>
+            {product.data.art_type === "Digital Prints" &&
+                <form className={style.form}>
                     <h3>PICK A PRINT SIZE</h3>
                     <div className={style.input__wrapper}>
                         <div className={style.input__container}>
@@ -73,7 +31,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <input type="radio" id="4x5" name="radio" required />
                         </div>
                         <h6 className={style.input__amount}>
-                            ${10 * 2}
+                            ${product.data.amount}
                         </h6>
                     </div>
                     <div className={style.input__wrapper}>
@@ -82,7 +40,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <input type="radio" id="8x10" name="radio" required />
                         </div>
                         <h6 className={style.input__amount}>
-                            ${10 * 4}
+                            ${increaseAmount * 2}
                         </h6>
                     </div>
                     <div className={style.input__wrapper}>
@@ -91,7 +49,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <input type="radio" id="12x15" name="radio" required />
                         </div>
                         <h6 className={style.input__amount}>
-                            ${10 * 6}
+                            ${increaseAmount * 3}
                         </h6>
                     </div>
                     <div className={style.input__wrapper}>
@@ -100,51 +58,41 @@ const page = ({ params }: { params: { slug: string } }) => {
                             <input type="radio" id="20x24" name="radio" required />
                         </div>
                         <h6 className={style.input__amount}>
-                            ${10 * 8}
+                            ${increaseAmount * 4}
                         </h6>
                     </div>
 
                     <button type="submit" className={style.button}>ADD TO CART</button>
                 </form>
+            }
 
-                {/* <form className={style.form}>
+            {product.data.art_type === "Traditional Art" &&
+                <form className={style.form}>
                     <h3>ART SIZE</h3>
                     <div className={style.input__wrapper}>
                         <div className={style.input__container}>
-                            <label htmlFor="20x24">20 x 24</label>
-                            <input type="radio" id="20x24" name="radio" required />
+                            <label htmlFor="size">{product.data.size}</label>
+                            <input type="radio" id="size" name="radio" required />
                         </div>
                         <h6 className={style.input__amount}>
-                            ${10}
+                            ${product.data.amount}
                         </h6>
                     </div>
                     <button type="submit" className={style.button}>
                         ADD TO CART
                     </button>
-                </form> */}
+                </form>
+            }
             
-
+            {product.data.art_type === "Traditional Art" &&
             <div className={style.description}>
                 <div className={style.title}>
-                    <h3> TELL THE WOLVES I AM HOME </h3>
-                    <p> Acrylic, oil on canvas </p>
+                    <h3> {product.data.title} </h3>
+                    <p> {product.data.medium} </p>
                 </div>
-
-
-                <p> In this captivating artwork, "Wings of Resilience," the elegant
-                    silhouette of a black woman's torso takes center stage, enveloped by the intricate
-                    patterns of butterflies printed on an Ankara fabric backdrop. The striking
-                    juxtaposition of the human form and the vibrant Ankara fabric creates a narrative of
-                    strength, beauty, and transformation.
-                    The butterflies, symbolizing metamorphosis and renewal, flutter delicately in the
-                    background, lending a sense of enchantment and grace to the composition. Their
-                    intricate patterns mirror the complexities and intricacies of the human spirit,
-                    accentuating the resilience and enduring grace inherent within the woman depicted.
-                    "Wings of Resilience" serves as an ode to the indomitable spirit of the black woman,
-                    celebrating her unwavering strength and ability to transform and emerge with
-                    newfound grace and beauty.
-                </p>
+                <p>{product.data.description}</p>
             </div>
+            }
         </div>
 
         </div>
