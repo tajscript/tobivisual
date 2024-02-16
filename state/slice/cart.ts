@@ -1,4 +1,8 @@
-import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
+import { createAction, createSlice, current, PayloadAction } from '@reduxjs/toolkit';
+
+export const updateQuantity = createAction<{ id: string; size: string; quantity: number }>(
+    'cart/updateQuantity'
+  );
 
 interface CartItem {
   id: string;
@@ -26,33 +30,48 @@ const cartSlice = createSlice({
       } else {
         state.push({ id, quantity, title, image, size, amount });
       }
-      console.log("Add To Cart", addToCart)
     },
 
-    incrementQuantity: (state, action: PayloadAction<string>) => {
-      const item = state.find((item) => item.size === action.payload);
-      if (item) {
-        item.quantity++;
-      }
+    incrementQuantity: (state, action: PayloadAction<{ id: string; size: string; }>) => {
+        const { id, size } = action.payload;
+        const item = state.find((cartItem) => cartItem.id === id && cartItem.size === size);
+        if (item) {
+            item.quantity++;
+        }
     },
 
-    decrementQuantity: (state, action: PayloadAction<string>) => {
-      const item = state.find((item) => item.size === action.payload);
+    decrementQuantity: (state, action: PayloadAction<{ id: string; size: string; }>) => {
+    const { id, size } = action.payload;
+      const item = state.find((cartItem) => cartItem.id === id && cartItem.size === size);
       if (item) {
         if (item.quantity === 1) {
-        item.quantity
         } else {
           item.quantity--;
         }
       }
     },
 
-    removeFromCart: (state, action: PayloadAction<string>) => {
-      const index = state.findIndex((item) => item.size === action.payload);
+    removeFromCart: (state, action: PayloadAction<{ id: string; size: string; }>) => {
+        const { id, size } = action.payload;
+      const index = state.findIndex((cartItem) => cartItem.id === id && cartItem.size === size);
       if (index !== -1) {
         state.splice(index, 1);
       }
     },
+    
+    clearCart: (state ) => {
+      state.length = 0;
+    },
+  },
+
+  extraReducers: (builder) => {
+      builder.addCase(updateQuantity, (state, action) => {
+        const { id, size, quantity } = action.payload;
+        const item = state.find((cartItem) => cartItem.id === id && cartItem.size === size)
+        if (item) {
+            item.quantity = quantity;
+        }
+      })
   },
 });
 
@@ -63,5 +82,6 @@ export const {
   incrementQuantity,
   decrementQuantity,
   removeFromCart,
+  clearCart,
 } = cartSlice.actions;
 export default cartSlice.reducer;
