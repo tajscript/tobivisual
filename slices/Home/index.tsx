@@ -1,8 +1,14 @@
+"use client"
+
 import { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
-import Image from "next/image";
+import CurrentTime from "@/components/currentTime";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 import style from "@/styles/home.module.css"
 
@@ -16,20 +22,62 @@ export type HomeProps = SliceComponentProps<Content.HomeSlice>;
  * Component for "Home" Slices.
  */
 const Home = ({ slice }: HomeProps): JSX.Element => {
+  const colorRef = useRef(null);
+  const heroRef = useRef(null);
+  const workRef = useRef(null);
+  const imageRef = useRef(null);
+  const imageRef1 = useRef(null);
+  const imageRef2 = useRef(null);
+  const imageRef3 = useRef(null);
+  
+  useLayoutEffect(() => {
+
+    let hero = gsap.context(() => {
+      gsap.to(heroRef.current, {duration: 1.5, delay: 0.5, opacity: 1})
+
+
+      gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 10, y: -10 })
+
+      gsap.fromTo(imageRef1.current, {x: 0, y: 0}, {duration: 1.5, delay: 2.5, x: 20, y: -20 })
+
+      gsap.fromTo(imageRef2.current, {x: 0, y: 0}, {duration: 1.5, delay: 3, x: 30, y: -30 })
+
+      gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 3.5, x: 40, y: -40 })
+
+
+      gsap.to( ["#about"], {
+        scrollTrigger: {
+            trigger: colorRef.current,
+            scrub: 1,
+            end: "bottom bottom",
+        },
+        backgroundColor: "black",
+        color: "white",
+        duration: 2,
+        yoyo: true
+    })
+    })
+
+    return () => {
+        hero.revert();
+    }
+
+    }, [])
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className={style.home}
     >
-      <div className={style.wrapper}>
+      <div className={style.wrapper}  ref={heroRef}>
 
       {/* Hero Section */}
-      <div className={style.home__wrapper}>
+      <div className={style.home__wrapper} id="home">
       <nav className={style.nav}>
-        <button className={style.nav__home}>{slice.primary.home_text}</button>
-          <div className={style.real__time}>[ Abuja, 04:12 ]</div>
-        <Link href="/" className={style.nav__shop}>{slice.primary.shop_text}</Link>
+        <Link href="/menu" className={style.nav__text}>{slice.primary.home_text}</Link>
+          <div className={style.real__time}>NG, <span><CurrentTime /></span></div>
+        <Link href="/shop" className={style.nav__text}>{slice.primary.shop_text}</Link>
       </nav>
 
 
@@ -39,18 +87,26 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
           <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
-          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
         </div>
-        
-        {/* <div className={style.home__background_inner} style={{ backgroundImage: 'url(' + slice.primary.background_image.url + ')' }}></div> */}
 
         <div className={style.home__background}>
-            <PrismicNextImage field={slice.primary.background_image_3} className={`${style.background__image} ${style.image__rotate_4}`}/>
-            <PrismicNextImage field={slice.primary.background_image} className={`${style.background__image} ${style.image__rotate_3}`} />
-            <PrismicNextImage field={slice.primary.background_image_3} className={`${style.background__image} ${style.image__rotate_2}`} />
-            <PrismicNextImage field={slice.primary.background_image_2} className={`${style.background__image} ${style.image__rotate_1}`}/>
-            <PrismicNextImage field={slice.primary.background_image} className={`${style.background__image} ${style.image__rotate}`}/>
+            <div className={`${style.background__image} ${style.image__rotate_4}`} ref={imageRef3}>
+            <PrismicNextImage field={slice.primary.background_image_3} className={style.image}  />
+            </div>
+            <div className={`${style.background__image} ${style.image__rotate_3}`} ref={imageRef2}>
+            <PrismicNextImage field={slice.primary.background_image} className={style.image}  />
+            </div>
+            <div className={`${style.background__image} ${style.image__rotate_2}`} ref={imageRef1}>
+            <PrismicNextImage field={slice.primary.background_image_3} className={style.image} />
+            </div>
+            <div className={`${style.background__image} ${style.image__rotate_1}`} ref={imageRef}>
+            <PrismicNextImage field={slice.primary.background_image_2} className={style.image}/>
+            </div>
+            <div className={style.background__image}>
+            <PrismicNextImage field={slice.primary.background_image} className={style.image}/>
+            </div>
         </div>
 
       </div>
@@ -67,7 +123,7 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       </div>
 
       {/* About Section */}
-      <div className={style.about__wrapper}>
+      <div className={style.about__wrapper} id="about" ref={colorRef}>
         <div className={style.about__details}>
           <div className={style.about__text}>
             <h4>{slice.primary.about_text}</h4>
@@ -80,10 +136,10 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       </div>
 
       {/* Work Section */}
-      <div className={style.work__wrapper}>
+      <div className={style.work__wrapper} id="work" ref={workRef}>
         <div className={style.work__details}>
           <div className={style.work__image}>
-          <PrismicNextImage field={slice.primary.work_image} className={style.image} />
+          <PrismicNextImage field={slice.primary.work_image} className={style.work_image} />
           </div>
           
           <div className={style.work__description}>
