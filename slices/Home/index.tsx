@@ -5,7 +5,8 @@ import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
 import CurrentTime from "@/components/currentTime";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
+import FolioNav from "@/components/folioNav";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
@@ -22,6 +23,7 @@ export type HomeProps = SliceComponentProps<Content.HomeSlice>;
  * Component for "Home" Slices.
  */
 const Home = ({ slice }: HomeProps): JSX.Element => {
+  const [isNavOpen, setIsNavOpen] = useState(false)
   const colorRef = useRef(null);
   const heroRef = useRef(null);
   const workRef = useRef(null);
@@ -29,11 +31,21 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
   const imageRef1 = useRef(null);
   const imageRef2 = useRef(null);
   const imageRef3 = useRef(null);
+  const aboutRef = useRef(null);
+  const workDetailsRef = useRef(null);
+
+  const handleNavOpen = () => {
+    setIsNavOpen(!isNavOpen)
+  }
+
+  const handleNavClose = () => {
+    setIsNavOpen(false)
+  }
   
   useLayoutEffect(() => {
 
     let hero = gsap.context(() => {
-      gsap.to(heroRef.current, {duration: 1.5, delay: 0.5, opacity: 1})
+      gsap.to(heroRef.current, {duration: 1.5, delay: 0.5, opacity: 1})})
 
 
       gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 10, y: -10 })
@@ -45,18 +57,46 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 3.5, x: 40, y: -40 })
 
 
-      gsap.to( ["#about"], {
-        scrollTrigger: {
-            trigger: colorRef.current,
-            scrub: 1,
-            end: "bottom bottom",
-        },
-        backgroundColor: "black",
-        color: "white",
-        duration: 2,
-        yoyo: true
+    //   gsap.to( ["#about"], {
+    //     scrollTrigger: {
+    //         trigger: colorRef.current,
+    //         scrub: 1,
+    //         end: "bottom bottom",
+    //     },
+    //     backgroundColor: "black",
+    //     color: "white",
+    //     duration: 2,
+    //     yoyo: true
+    // })
+    
+
+    gsap.fromTo(aboutRef.current, {
+      yPercent: 50
+    }, {
+      scrollTrigger: {
+          trigger: colorRef.current, 
+          scrub: 2, 
+      },
+      yPercent: 0,
+      duration: 2,
+      yoyo: true,
     })
-    })
+
+    gsap.to("#visual", {
+      xPercent: 100, 
+      repeat: -1, 
+      duration: 10, 
+      ease: "none",
+      yoyo: true
+  });
+
+  gsap.to("#line", {
+    scaleX: 5,
+    duration: 5,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut"
+  })
 
     return () => {
         hero.revert();
@@ -71,24 +111,30 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       className={style.home}
     >
       <div className={style.wrapper}  ref={heroRef}>
+        <FolioNav isOpen={isNavOpen} onClose={handleNavClose} />
 
       {/* Hero Section */}
       <div className={style.home__wrapper} id="home">
       <nav className={style.nav}>
-        <Link href="/menu" className={style.nav__text}>{slice.primary.home_text}</Link>
+        <button onClick={handleNavOpen} className={style.nav__text}>{slice.primary.home_text}</button>
           <div className={style.real__time}>NG, <span><CurrentTime /></span></div>
         <Link href="/shop" className={style.nav__text}>{slice.primary.shop_text}</Link>
       </nav>
 
-
       <div className={style.home__content}>
-        <div className={style.home__title}>
+        <div className={style.home__title} id="visual">
           <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
           <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
           <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
           <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
+          <h2 className={style.home__text_l}>{slice.primary.visual_text}</h2>
+          <h2 className={style.home__text_r}>{slice.primary.artist_text}</h2>
         </div>
 
         <div className={style.home__background}>
@@ -124,10 +170,10 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
 
       {/* About Section */}
       <div className={style.about__wrapper} id="about" ref={colorRef}>
-        <div className={style.about__details}>
-          <div className={style.about__text}>
+        <div className={style.about__details} ref={aboutRef}>
+          <Link href="/about" className={style.about__text}>
             <h4>{slice.primary.about_text}</h4>
-          </div>
+          </Link>
 
           <div className={style.about__descripton}>
             <p>{slice.primary.about_description}</p>
@@ -138,16 +184,16 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       {/* Work Section */}
       <div className={style.work__wrapper} id="work" ref={workRef}>
         <div className={style.work__details}>
-          <div className={style.work__image}>
+          <div className={style.work__image} ref={workDetailsRef}>
           <PrismicNextImage field={slice.primary.work_image} className={style.work_image} />
           </div>
           
           <div className={style.work__description}>
-          <div className={style.work__line} />
+          <div className={style.work__line} id="line" />
             <p>
             {slice.primary.work_description}
             </p>
-          <div className={style.work__line} />
+          <div className={style.work__line} id="line" />
           </div>
           
         </div>

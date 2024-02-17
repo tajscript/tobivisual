@@ -64,7 +64,7 @@
 
 /* About Styling */
 .about__wrapper {
-    @apply h-screen font-grotesk w-full flex items-center px-3 sm:px-5 xl:px-20
+    @apply h-screen font-grotesk bg-black text-white w-full flex items-center px-3 sm:px-5 xl:px-20 overflow-hidden
 }
 
 .about__details {
@@ -72,16 +72,16 @@
 }
 
 .about__text {
-    @apply border border-white text-white w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg transition-all hover:bg-white hover:text-black duration-200 ease-linear
+    @apply border border-white w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg transition-all hover:bg-white hover:text-black duration-200 ease-linear
 }
 
 .about__descripton {
-    @apply w-full text-white lg:w-[70%] lg:text-lg text-center sm:text-left
+    @apply w-full lg:w-[70%] lg:text-lg text-center sm:text-left uppercase
 }
 
 /* Work Styling */
 .work__wrapper {
-    @apply h-full w-full xl:pr-10 font-grotesk bg-black text-white
+    @apply h-full w-full xl:pr-10 pt-10 font-grotesk bg-black text-white lg:pt-0
 }
 
 .work__details {
@@ -97,7 +97,7 @@
 }
 
 .work__description p {
-    @apply py-10 xl:text-lg
+    @apply py-10 xl:text-lg uppercase
 }
 
 .work_image {
@@ -105,5 +105,5 @@
 }
 
 .work__line {
-    @apply h-1 bg-flame rounded-full
+    @apply h-1 bg-flame w-32 mx-auto
 }
