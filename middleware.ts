@@ -17,6 +17,5 @@ export const config = {
         '/shop',
         '/login',
         '/register',
-        '/verify',
     ]
 }
