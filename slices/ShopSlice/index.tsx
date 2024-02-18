@@ -10,30 +10,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef, useEffect, useState } from "react";
-gsap.registerPlugin(ScrollTrigger)
+import { useEffect, useState } from "react";
 
 import Nav from "@/components/nav";
 
 export type ShopSliceProps = SliceComponentProps<Content.ShopSliceSlice>
 
 const ProductSection = ({ products }: { products: any[] }) => {
-  const shopRef = useRef(null);
-
-  useLayoutEffect(() => {
-    let shop = gsap.context(() => {
-    gsap.to(shopRef.current, {duration: 1, opacity: 1})})
-
-    return () => {
-      shop.revert();
-    }
-
-    }, [])
 
   return (
-  <div className={style.product} ref={shopRef}>
+  <div className={style.product}>
     <Swiper 
     className={style.product__wrapper}
     modules={[ Navigation ]}
@@ -65,7 +51,7 @@ const ProductSection = ({ products }: { products: any[] }) => {
       {products.map((item, index) => item && (
         <SwiperSlide key={index}>
         <Link href={`/shop/${item.slug}`} className={style.product__index}>
-          <PrismicNextImage field={item.data.image} className={style.image}/>
+          <PrismicNextImage field={item.data.image} className={style.image} priority />
           <h3>{item.data.title}</h3>
           <h4>₦{item.data.amount}</h4>
         </Link>

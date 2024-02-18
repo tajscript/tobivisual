@@ -43,7 +43,7 @@
 }
 
 .image {
-    @apply w-72 h-80 xl:w-[26rem] xl:h-[28rem]
+    @apply w-80 h-96 xl:w-[26rem] xl:h-[28rem]
 }
 
 .image__rotate_4, .image__rotate_3, .image__rotate_2, .image__rotate_1 {

@@ -51,11 +51,11 @@
 }
 
 .visual__container {
-    @apply w-full h-screen flex flex-col sm:items-center justify-center px-5 sm:px-10 lg:px-20
+    @apply w-full h-[50vh] flex flex-col sm:items-center justify-center px-5 sm:px-10 lg:px-20 sm:h-screen
 }
 
 .visual__text {
-    @apply text-6xl font-raleway font-semibold sm:text-7xl lg:text-8xl
+    @apply text-7xl font-raleway font-semibold sm:text-7xl lg:text-8xl
 }
 
 .visual__text_r {
@@ -63,7 +63,7 @@
 }
 
 .visual__description {
-    @apply w-full flex gap-2 sm:w-72 sm:ml-72 relative
+    @apply w-full flex px-5 sm:px-0 gap-2 sm:w-72 sm:ml-72 relative
 }
 
 .visual__description p {
@@ -71,7 +71,7 @@
 }
 
 .icon {
-    @apply text-lg animate-spin absolute -left-5
+    @apply text-lg animate-spin absolute left-0 sm:-left-5
 }
 
 .details__about {

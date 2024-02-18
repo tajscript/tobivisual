@@ -31,7 +31,7 @@
 }
 
 .description {
-    @apply mt-5 flex gap-2 flex-col items-center lg:mt-0
+    @apply mt-5 flex gap-2 flex-col items-center pb-10 sm:pb-0 lg:mt-0
 }
 
 .form {
@@ -63,7 +63,7 @@
 }
 
 .input__container input[type="radio"]:checked {
-    @apply bg-black
+    @apply bg-black w-full h-full
 }
 
 .button {
@@ -72,7 +72,7 @@
 
 /* Cart Popup */
 .cart__pop {
-    @apply bg-flame fixed top-10 lg:bottom-20 right-2 w-64 sm:w-72 h-20 rounded-lg sm:top-20 sm:h-24 flex flex-col items-center justify-center font-raleway sm:right-5
+    @apply bg-flame fixed top-10 lg:bottom-20 right-2 w-72 h-24 rounded-lg sm:top-20 flex flex-col items-center justify-center font-raleway sm:right-5
 }
 
 .cart__pop p {

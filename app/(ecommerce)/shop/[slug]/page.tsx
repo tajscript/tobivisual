@@ -79,7 +79,7 @@ const page = ({ params }: { params: { slug: string } }) => {
         <div><Toaster /></div>
         <div className={style.wrapper}>
         <div className={style.image__wrapper}>
-            <Image src={product?.data.image.url || ""} alt="Product Image" width={500} height={500} className={style.image}></Image>
+            <Image src={product?.data.image.url || ""} alt="Product Image" width={500} height={500} priority className={style.image}></Image>
         </div>
 
         <div className={style.details}>

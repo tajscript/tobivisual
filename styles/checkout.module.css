@@ -35,11 +35,11 @@
 }
 
 .image  {
-    @apply w-24 sm:w-32 text-left
+    @apply w-24 sm:w-32
 }
 
 .total {
-    @apply border-y mt-5 border-black py-1 text-sm w-full text-end sm:py-2 font-semibold
+    @apply border-y mt-5 border-black py-2 text-sm w-full text-end font-semibold
 }
 
 .wrapper h5 {
@@ -71,13 +71,13 @@
 }
 
 .contact input {
-    @apply  w-full h-8 focus:outline-none border border-black px-1 mb-2 
+    @apply  w-full h-10 focus:outline-none border border-black px-1 mb-2 
 }
 
 .contact select {
-    @apply  w-full h-8 focus:outline-none border border-black px-1 mb-2 text-black
+    @apply  w-full h-10 focus:outline-none border border-black px-1 mb-2 text-black
 }
 
 .paystack__button {
-    @apply bg-flame text-white font-bold text-sm border border-flame transition-colors duration-300 ease-in-out w-full h-9 mt-2 sm:mt-4 hover:bg-white hover:text-flame lg:h-10 xl:mx-32 xl:w-[75rem]
+    @apply bg-flame text-white font-bold text-sm border border-flame transition-colors duration-300 ease-in-out w-full h-10 mt-2 sm:mt-4 hover:bg-white hover:text-flame lg:h-10 xl:mx-32 xl:w-[75rem]
 }

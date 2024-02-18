@@ -31,11 +31,11 @@
 }
 
 .form input {
-    @apply bg-gray-300 h-8 mb-2 focus:outline-none px-1
+    @apply bg-gray-300 h-10 mb-2 focus:outline-none px-1
 }
 
 .form button {
-    @apply w-full bg-black text-white h-8 mt-3 border-black border transition-colors duration-300 ease-in-out hover:bg-white hover:text-black text-sm
+    @apply w-full bg-black text-white h-10 mt-3 border-black border transition-colors duration-300 ease-in-out hover:bg-white hover:text-black text-sm
 }
 
 .link {

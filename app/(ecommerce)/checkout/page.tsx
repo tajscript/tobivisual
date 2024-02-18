@@ -123,7 +123,7 @@ const getTotalPrice = () => {
             </div>
             {cart.map((item) => (
                 <div className={style.item__flex}>
-                            <Image src={item.image} alt="Product Image" width={300} height={300} className={style.image}></Image>
+                            <Image src={item.image} alt="Product Image" priority width={300} height={300} className={style.image}></Image>
                             <h3 className={style.hide}>{item.title}</h3>
                             <h3>{item.quantity}</h3>
                             <h3>₦{item.amount}</h3>

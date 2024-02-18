@@ -23,7 +23,7 @@
 }
 
 .image__wrapper {
-    @apply pl-3 pt-28 pb-10 sm:pl-5 lg:pl-20 flex flex-row gap-5 relative md:pt-16 opacity-0 xl:pt-20
+    @apply pl-3 pt-28 pb-10 sm:pl-5 lg:pl-20 flex flex-row gap-5 relative md:pt-16 xl:pt-20
 }
 
 .real__time {

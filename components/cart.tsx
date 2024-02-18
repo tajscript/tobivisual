@@ -52,7 +52,7 @@ const cart: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onCl
             <div className={style.cart__checkout}>
                 <div className={style.cart__review}>
                 <div className={style.cart__images}>
-                    <Image src={item.image} alt="Product Image" width={500} height={500} className={style.cart__image}></Image>
+                    <Image src={item.image} priority alt="Product Image" width={500} height={500} className={style.cart__image}></Image>
                 </div>
 
                 <div className={style.cart__details}>

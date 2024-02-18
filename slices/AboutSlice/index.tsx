@@ -52,7 +52,7 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
       yPercent: 25
     }, {
       scrollTrigger: {
-          trigger: "#details", 
+          trigger: lineRef.current, 
           scrub: 2, 
           end: "bottom top"
       },

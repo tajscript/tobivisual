@@ -115,7 +115,7 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
               <p>{item.art_description}</p>
             </div>
             <div className={style.slice__image} id="image">
-            <PrismicNextImage field={item.art_image} className={style.image__slice} />
+            <PrismicNextImage field={item.art_image} className={style.image__slice} priority />
             </div>
             <div className={style.line} id="line"></div>
           </div>
