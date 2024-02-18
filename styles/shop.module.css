@@ -3,23 +3,19 @@
 }
 
 .wrapper {
-    @apply w-full h-full flex flex-col justify-between
-}
-
-.total__number {
-    @apply font-semibold text-xl font-cute pl-3 sm:pl-5 mt-2 sm:text-2xl lg:pl-10
+    @apply w-full h-full block pt-10
 }
 
 .title__wrapper {
-    @apply relative w-full mt-5 sm:mt-10
+    @apply relative w-full pt-12
 }
 
 .title__display {
-    @apply text-center relative text-4xl px-3 sm:text-5xl lg:text-6xl 
+    @apply text-center uppercase font-semibold relative text-5xl px-3 sm:text-7xl xl:text-8xl 
 }
 
 .title__container {
-    @apply absolute w-full flex justify-between flex-row sm:flex-col sm:top-0 sm:right-0 sm:gap-1 sm:w-32 px-3 sm:px-0
+    @apply absolute mt-2 w-full flex justify-center gap-3 sm:gap-5 flex-row lg:flex-col lg:bottom-0 lg:right-0 lg:gap-1 lg:w-32 px-3 lg:px-0 lg:mt-0
 }
 
 .button {
@@ -27,11 +23,11 @@
 }
 
 .button p {
-    @apply sm:transition-all sm:duration-500 sm:hover:px-2 sm:ease-in-out font-normal text-sm
+    @apply lg:transition-all lg:duration-500 lg:hover:px-2 lg:ease-in-out font-normal text-sm
 }
 
 .product {
-    @apply mt-10
+    @apply pt-8 sm:pt-14 md:pt-6 xl:pt-14
 }
 
 .button__container {
@@ -39,19 +35,19 @@
 }
 
 .product__button {
-    @apply font-semibold text-2xl transition-colors duration-200 delay-100 ease-in-out hover:bg-black hover:text-white
+    @apply font-semibold text-xl transition-colors duration-200 delay-100 ease-in-out hover:bg-black hover:text-white
 }
 
 .product__wrapper {
-    @apply pl-3 mt-10 mb-10 flex flex-row gap-2 sm:pl-10 sm:mt-2 sm:gap-4 lg:gap-5
+    @apply pl-3 mt-14 mb-10 flex h-[26rem] w-full flex-row gap-2 sm:px-10 lg:mt-12 sm:gap-4 lg:gap-5 items-center
 }
 
 .product__index {
-    @apply min-w-64 cursor-pointer lg:min-w-72
+    @apply min-w-64 cursor-pointer bg-red-500 h-[23rem] sm:h-96 lg:min-w-72
 }
 
 .image {
-    @apply w-full h-80 lg:h-[22rem]
+    @apply w-full h-80 lg:h-[21rem]
 }
 
 .product__index h3 {

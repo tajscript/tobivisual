@@ -17,8 +17,11 @@ const config: Config = {
         cute: ['var(--font-cute)'],
       },
       colors: {
-        'offgray': '#333333',
-        'offwhite': '#D9D9D9'
+        'offgray': '#f1d302',
+        'offwhite': '#D9D9D9',
+        'yellowGreen': '#A2D729',
+        'magenta': '#80475E',
+        'flame': '#EE6055'
       }
     },
   },

@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply flex flex-col w-full sm:w-72 lg:w-80
+    @apply flex flex-col w-full sm:w-80 lg:w-96
 }
 
 .wrapper h3 {

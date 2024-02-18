@@ -58,7 +58,7 @@ const cart: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onCl
                 <div className={style.cart__details}>
                     <h3>{item.title}</h3>
                     <p>{item.size}</p>
-                    <h4>${item.amount}</h4>
+                    <h4>₦{item.amount}</h4>
 
                     <div className={style.crement}>
                         <button onClick={() => dispatch(decrementQuantity({id: item.id, size: item.size}))}><FiMinus /></button>
@@ -78,7 +78,7 @@ const cart: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onCl
             <footer className={style.checkout}>
                 <div className={style.checkout__wrapper}>
                     <p>Subtotal:</p>
-                    <h5>${getTotalPrice()}</h5>
+                    <h5>₦{getTotalPrice()}</h5>
                 </div>
 
                 <button className={style.checkout__button}

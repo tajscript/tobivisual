@@ -3,11 +3,15 @@
 }
 
 .wrapper {
-    @apply  w-full h-screen overflow-hidden
+    @apply  w-full h-screen overflow-hidden opacity-0
 }
 
 .nav {
     @apply bg-transparent font-grotesk flex items-center justify-between px-3 sm:px-5 xl:px-20 py-3 relative h-[10vh]
+}
+
+.nav__text {
+    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame
 }
 
 .container {
@@ -15,7 +19,7 @@
 }
 
 .container h3 {
-    @apply pt-10 text-center text-3xl sm:text-4xl lg:text-5xl lg:pt-16
+    @apply pt-10 text-center text-5xl sm:text-7xl lg:text-8xl lg:pt-16
 }
 
 .commission {
@@ -32,4 +36,8 @@
 
 .shop__wrapper {
     @apply mt-5 w-full px-3 sm:px-10 lg:px-20
+}
+
+.flame {
+    @apply border-flame bg-flame hover:bg-black hover:text-white
 }

@@ -1,0 +1,19 @@
+.menu {
+    @apply  absolute z-50 overflow-hidden font-grotesk
+}
+
+.close {
+    @apply text-lg uppercase underline font-bold
+}
+
+.link__wrapper {
+    @apply w-full h-full flex items-center justify-center flex-col pb-20 gap-2
+}
+
+.link {
+    @apply text-lg sm:text-xl hover:text-flame font-medium
+}
+
+.button {
+    @apply border-white border-2 w-24 h-8 rounded-lg sm:w-28 sm:h-9 transition-colors duration-300 ease-linear hover:bg-flame hover:border-flame hover:text-white flex items-center justify-center lg:w-32 lg:h-10 font-medium
+}

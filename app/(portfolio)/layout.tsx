@@ -4,6 +4,8 @@ import { Raleway } from 'next/font/google';
 import { Cute_Font } from 'next/font/google';
 import '@/styles/globals.css'
 import { createClient } from '@/prismicio';
+import CustomCursor from "@/components/customCursor";
+
 
 import Favicon from "@/public/assets/favicon.ico"
 
@@ -50,7 +52,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${grotesk.variable} ${raleway.variable} ${cute.variable}`}>{children}</body>
+      <body className={`${grotesk.variable} ${raleway.variable} ${cute.variable} layout__cursor`}>
+        <CustomCursor />
+          {children}
+        </body>
     </html>
   )
 }

@@ -8,7 +8,6 @@ export async function POST(request: Request) {
     try {
         const reqBody = await request.json()
         const { email, phone, address, city, state, country, zip } = reqBody
-        console.log(reqBody)
 
         const updateInfo = User.findOneAndUpdate({email}, {
             phone: phone,

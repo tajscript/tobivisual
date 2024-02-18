@@ -45,29 +45,16 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
   useLayoutEffect(() => {
 
     let hero = gsap.context(() => {
-      gsap.to(heroRef.current, {duration: 1.5, delay: 0.5, opacity: 1})})
+      gsap.to(heroRef.current, {duration: 1, opacity: 1})})
 
 
-      gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 10, y: -10 })
+      gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 1.5, x: 10, y: -10 })
 
-      gsap.fromTo(imageRef1.current, {x: 0, y: 0}, {duration: 1.5, delay: 2.5, x: 20, y: -20 })
+      gsap.fromTo(imageRef1.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 20, y: -20 })
 
-      gsap.fromTo(imageRef2.current, {x: 0, y: 0}, {duration: 1.5, delay: 3, x: 30, y: -30 })
+      gsap.fromTo(imageRef2.current, {x: 0, y: 0}, {duration: 1.5, delay: 2.5, x: 30, y: -30 })
 
-      gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 3.5, x: 40, y: -40 })
-
-
-    //   gsap.to( ["#about"], {
-    //     scrollTrigger: {
-    //         trigger: colorRef.current,
-    //         scrub: 1,
-    //         end: "bottom bottom",
-    //     },
-    //     backgroundColor: "black",
-    //     color: "white",
-    //     duration: 2,
-    //     yoyo: true
-    // })
+      gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 3, x: 40, y: -40 })
     
 
     gsap.fromTo(aboutRef.current, {

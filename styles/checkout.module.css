@@ -1,5 +1,5 @@
 .payment {
-    @apply w-full min-h-[89vh] font-grotesk relative px-3 py-10 sm:px-5 lg:px-10 lg:py-16
+    @apply w-full min-h-[89vh] font-grotesk relative px-3 pb-10 pt-20 sm:px-5 lg:px-10
 }
 
 .wrapper {
@@ -7,63 +7,63 @@
 }
 
 .wrapper > h3 {
-    @apply text-center text-2xl font-semibold sm:text-4xl lg:text-5xl
+    @apply text-center text-6xl font-semibold sm:text-8xl
 }
 
 .item__wrapper {
-    @apply relative flex flex-col gap-10 mt-10
+    @apply block w-full mt-16
+}
+
+.item__details {
+    @apply flex flex-row w-full justify-between border-b border-black mb-2
+}
+
+.item__details h4 {
+    @apply font-semibold sm:text-lg text-center w-24 sm:w-32
 }
 
 .item__flex {
-    @apply flex flex-row w-full justify-between gap-5 lg:gap-10
+    @apply w-full flex flex-row justify-between mb-5
 }
 
-.items {
-    @apply flex flex-row gap-5 justify-center lg:gap-10
-}
-
-.item {
-    @apply text-center
+.item__flex h3 {
+    @apply text-center w-24 sm:w-32
 }
 
 .hide {
     @apply hidden sm:flex flex-col
 }
 
-.item h4 {
-    @apply text-sm mb-2 font-medium sm:mb-4 sm:text-base
-}
-
-.item h3 {
-    @apply text-sm 
-}
-
-.image {
-    @apply w-24 sm:w-32
+.image  {
+    @apply w-24 sm:w-32 text-left
 }
 
 .total {
-    @apply border-y border-black py-1 text-sm w-full text-end sm:py-2
+    @apply border-y mt-5 border-black py-1 text-sm w-full text-end sm:py-2 font-semibold
 }
 
 .wrapper h5 {
-    @apply mt-2 text-end text-xs sm:text-sm
+    @apply mt-2  text-end text-xs sm:text-sm
 }
 
 .wrapper h5 span {
-    @apply font-semibold
+    @apply font-bold text-flame
 }
 
 .form {
-    @apply mt-5 flex flex-col w-full gap-5 sm:flex-row sm:justify-center
+    @apply mt-5 flex flex-col w-full gap-5 sm:flex-row sm:justify-center xl:justify-between
 }
 
 .contact {
-    @apply flex flex-col w-full
+    @apply flex w-full xl:justify-center
+}
+
+.contact__wrapper {
+    @apply flex flex-col w-full xl:w-[30rem]
 }
 
 .contact h4 {
-    @apply font-medium mb-3
+    @apply font-medium mb-3 flex w-full
 }
 
 .contact label {
@@ -71,9 +71,13 @@
 }
 
 .contact input {
-    @apply  w-full h-8 focus:outline-none bg-gray-300 px-1 mb-2 xl:w-[30rem]
+    @apply  w-full h-8 focus:outline-none border border-black px-1 mb-2 
 }
 
-.contact button {
-    @apply bg-black text-sm border border-black transition-colors duration-300 ease-in-out text-white w-full h-8 mt-2 sm:mt-4 xl:w-[30rem] hover:bg-white hover:text-black
+.contact select {
+    @apply  w-full h-8 focus:outline-none border border-black px-1 mb-2 text-black
+}
+
+.paystack__button {
+    @apply bg-flame text-white font-bold text-sm border border-flame transition-colors duration-300 ease-in-out w-full h-9 mt-2 sm:mt-4 hover:bg-white hover:text-flame lg:h-10 xl:mx-32 xl:w-[75rem]
 }

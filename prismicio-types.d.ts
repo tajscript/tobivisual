@@ -209,13 +209,13 @@ interface FeaturedartDocumentData {
   /**
    * Amount field in *FeaturedArt*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Number
    * - **Placeholder**: *None*
    * - **API ID Path**: featuredart.amount
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#number
    */
-  amount: prismic.KeyTextField;
+  amount: prismic.NumberField;
 
   /**
    * Medium field in *FeaturedArt*

@@ -20,7 +20,7 @@
         "type": "UID"
       },
       "amount": {
-        "type": "Text",
+        "type": "Number",
         "config": {
           "label": "Amount",
           "placeholder": ""

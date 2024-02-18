@@ -1,5 +1,6 @@
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import ReduxProvider from '@/state/ReduxProvider';
 import '@/styles/globals.css';
 
 export const metadata = {
@@ -15,9 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <Nav />
-            {children}
+      <ReduxProvider>
+        <div className="layout__body">
+          {children}
+        </div>
+
+        <footer className="layout__footer">
           <Footer />
+        </footer>
+        </ReduxProvider>
       </body>
     </html>
   )

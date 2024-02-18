@@ -19,7 +19,7 @@
 }
 
 .nav__text {
-    @apply font-medium font-grotesk sm:text-lg
+    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame
 }
 
 .home__wrapper {

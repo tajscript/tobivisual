@@ -3,15 +3,19 @@
 }
 
 .wrapper {
-    @apply block relative w-full h-full overflow-hidden uppercase
+    @apply block relative w-full h-full overflow-hidden opacity-0
 }
 
 .nav {
     @apply h-12 font-grotesk font-medium sm:text-lg flex items-center justify-between px-3 sm:px-5 md:h-16 xl:px-20
 }
 
+.nav__text {
+    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame
+}
+
 .container {
-    @apply w-full font-raleway mb-10 px-5 pt-10 h-[90vh] flex gap-5 flex-col sm:px-10 lg:flex-row md:items-center lg:pt-20 xl:px-20 xl:gap-10
+    @apply w-full font-raleway mb-10 px-5 pt-10 h-[90vh] flex gap-5 flex-col sm:px-10 lg:flex-row md:items-center lg:pt-10 xl:px-20 xl:gap-10
 }
 
 .image__wrapper {
@@ -23,53 +27,57 @@
 }
 
 .details h3 {
-    @apply sm:text-lg lg:text-2xl font-semibold
+    @apply sm:text-lg lg:text-2xl font-semibold uppercase
 }
 
 .details > h4 {
-    @apply text-sm text-offgray mb-5
+    @apply text-sm text-gray-400 mb-5 
 }
 
 .details > p {
-    @apply text-xs sm:text-sm text-center
+    @apply text-sm text-center sm:text-base
 }
 
 .mission__statement {
-    @apply w-full h-screen flex items-center justify-center bg-black text-white px-5
+    @apply w-full h-screen flex items-center justify-center px-5
 }
 
 .mission__statement h3 {
-    @apply w-full sm:w-72 font-grotesk text-center
+    @apply w-full sm:w-72 font-grotesk text-center uppercase
 }
 
 .slices {
-    @apply w-full h-screen relative overflow-y-hidden overflow-x-scroll flex flex-row justify-center items-center
+    @apply w-full h-full relative flex flex-col items-center justify-center gap-10 mt-10
 }
 
 .slice__wrapper {
-    @apply relative py-3 px-5 sm:px-10 min-w-[100vw] w-full flex flex-col items-center justify-between gap-5 lg:flex-row lg:py-20 lg:pr-0 lg:gap-10
+    @apply relative py-3 px-5 pb-16 sm:px-10 min-w-[100vw] w-full flex flex-col items-center justify-between gap-5 lg:flex-row lg:px-20 lg:gap-10
 }
 
 .slice__image {
-    @apply w-full lg:w-[60%] xl:w-[50%] lg:py-5 flex justify-center
+    @apply w-80 h-96 sm:w-96 sm:h-[28rem] border border-black rounded-lg p-2 lg:w-[30rem] lg:h-[35rem]
 }
 
 .image__slice {
-    @apply w-72 sm:w-96 lg:w-full
+    @apply w-full rounded-lg h-full
 }
 
 .slice__details {
-    @apply block text-center h-full lg:w-[40%] xl:w-[50%]
+    @apply block text-center lg:w-[40%] xl:w-[50%]
 }
 
 .slice__details h3 {
-    @apply text-lg sm:text-xl lg:text-2xl font-semibold
+    @apply  font-semibold sm:text-lg uppercase
 }
 
 .slice__details h4 {
-    @apply text-sm text-offgray
+    @apply text-sm text-gray-400
 }
 
 .slice__details p {
-    @apply text-xs mt-2 sm:text-sm lg:text-base 
+    @apply text-sm mt-2 sm:text-base
+}
+
+.line {
+    @apply w-32 mx-auto h-[0.15rem] bg-black absolute left-0 bottom-0
 }

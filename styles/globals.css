@@ -9,3 +9,78 @@
 html {
   @apply scroll-smooth
 }
+
+.layout__cursor {
+  @apply sm:cursor-none
+}
+
+.layout__nav {
+  @apply h-[5vh]
+}
+
+.layout__body {
+  @apply min-h-[89vh]
+}
+
+.layout__footer {
+  @apply h-[5vh]
+}
+
+/* Cart Design */
+.cart__wrapper {
+  @apply fixed bg-white pr-5 h-full w-full right-0 sm:w-96 lg:w-[26rem] translate-x-[100%] transition-transform duration-500 ease-in-out
+}
+
+.cart__wrapper > P {
+  @apply flex items-center justify-center w-full h-full text-xl font-raleway sm:text-2xl
+}
+
+.cart__wrapper.open {
+  @apply translate-x-0
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: default;
+  z-index: 20;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  background-color: transparent;
+  border: 2px solid #EE6055;
+  border-radius: 50%;
+  z-index: 999;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.cursor {
+  @apply hidden sm:block
+}
+
+.cursor__pointer {
+  @apply rounded-full bg-flame w-5 h-5
+}
+
+/* Nav */
+.menu__wrapper {
+  @apply  bg-black text-white translate-x-[100%] transition-transform duration-500 ease-in-out w-full h-screen fixed top-0 left-0 p-3 sm:p-5 text-opacity-0
+}
+
+.menu__wrapper.open {
+  @apply translate-x-0 text-opacity-100
+}
+
+/* Swiper */
+.swiper-button-next, .swiper-button-prev {
+  @apply after:text-black after:hidden after:sm:block
+}

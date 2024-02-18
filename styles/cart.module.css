@@ -1,0 +1,89 @@
+/* Cart Design */
+
+.cart {
+    @apply absolute z-50 right-0 h-screen overflow-hidden
+}
+
+.cart__color {
+    @apply h-full absolute w-5 bg-flame sm:w-7
+}
+
+.cart__nav {
+    @apply w-full relative ml-10 sm:ml-11 pt-2 flex flex-row items-center justify-between h-[5vh]
+}
+
+.cart__nav p {
+    @apply font-semibold sm:text-lg
+}
+
+.cart__icon {
+    @apply text-xl pr-10 sm:text-2xl
+}
+
+.cart__container {
+    @apply mt-5 ml-10 sm:ml-11 h-screen flex flex-col justify-between pb-24
+}
+
+.container__cart {
+    @apply h-[90%] w-full overflow-auto
+}
+
+.cart__checkout {
+    @apply mb-2
+}
+
+.cart__review {
+    @apply flex flex-row gap-5 w-full
+}
+
+.cart__images {
+    @apply w-[30%] h-full
+}
+
+.cart__image {
+    @apply w-full h-full
+}
+
+.cart__details {
+    @apply block w-[70%]
+}
+
+.cart__details h3 {
+    @apply text-xs font-medium sm:text-sm
+}
+
+.cart__details > p {
+    @apply text-sm text-gray-500
+}
+
+.cart__details h4 {
+    @apply font-bold
+}
+
+.crement {
+    @apply mt-1 flex flex-row gap-2 justify-between items-center border border-black w-20 px-1 h-8
+}
+
+.crement p {
+    @apply sm:text-lg font-semibold
+}
+
+.remove__button {
+    @apply w-full text-sm underline text-end
+}
+
+.checkout {
+    @apply block space-y-3 w-full h-[10%]
+}
+
+.checkout__wrapper {
+    @apply flex flex-row justify-between mb-2 items-center w-full
+}
+
+.checkout__wrapper h5 {
+    @apply font-semibold text-lg
+}
+
+.checkout__button {
+    @apply bg-black text-white flex items-center w-full justify-center h-8 text-sm transition-colors duration-300 ease-in-out hover:bg-flame
+}

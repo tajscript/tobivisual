@@ -1,85 +1,9 @@
 .slug {
-    @apply w-full min-h-[89vh] xl:overflow-hidden font-grotesk relative
-}
-
-.cart {
-    @apply absolute z-50 w-full -top-10 right-0 h-screen overflow-hidden
-}
-
-.cart__wrapper {
-    @apply fixed bg-white px-3 sm:px-5 h-full w-full right-0 sm:w-96 lg:w-[26rem]
-}
-
-.cart__nav {
-    @apply w-full pt-2 flex flex-row items-center justify-between h-[5vh]
-}
-
-.cart__container {
-    @apply mt-5 h-screen flex flex-col justify-between pb-24
-}
-
-.cart__checkout {
-    @apply h-[40rem] w-full space-y-2
-}
-
-.cart__review {
-    @apply flex flex-row gap-5 w-full
-}
-
-.cart__images {
-    @apply w-24 h-24
-}
-
-.cart__details {
-    @apply block
-}
-
-.cart__details h3 {
-    @apply text-xs font-medium sm:text-sm
-}
-
-.cart__details > p {
-    @apply text-sm text-gray-500
-}
-
-.cart__details h4 {
-    @apply font-bold
-}
-
-.crement {
-    @apply mt-1 mb-2 flex flex-row gap-2 justify-between items-center bg-offgray text-offwhite w-20 px-1
-}
-
-.crement p {
-    @apply text-lg font-semibold
-}
-
-.crement button {
-    @apply text-sm
-}
-
-.remove__button {
-    @apply w-full text-sm underline text-end
-}
-
-.checkout {
-    @apply block space-y-3 w-full
-}
-
-.checkout__wrapper {
-    @apply flex flex-row justify-between mb-2 items-center w-full
-}
-
-.checkout__wrapper h5 {
-    @apply font-semibold text-lg
-}
-
-.checkout__button {
-    @apply bg-black border border-black text-white flex items-center w-full justify-center h-8 text-sm transition-colors duration-300 ease-in-out hover:bg-white hover:text-black
+    @apply w-full min-h-[89vh] xl:overflow-hidden font-grotesk relative lg:h-[89vh]
 }
 
 .wrapper {
-    @apply w-full px-3 py-5 gap-2 sm:gap-5 sm:p-10 lg:px-20 h-full flex flex-col items-center justify-center xl:flex-row
+    @apply w-full px-3 py-5 gap-2 sm:gap-5 sm:p-10 lg:p-20 h-full flex flex-col items-center justify-center xl:flex-row
 }
 
 .image__wrapper {
@@ -131,7 +55,7 @@
 }
 
 .input__container label {
-    @apply flex items-center justify-center cursor-pointer z-10
+    @apply flex items-center justify-center cursor-pointer
 }
 
 .input__container input {
@@ -143,5 +67,18 @@
 }
 
 .button {
-    @apply w-full mt-3 bg-black border border-black text-white text-sm rounded-full transition-colors h-7 lg:h-9 lg:mt-4 duration-300 ease-in-out hover:bg-white hover:text-black mb-10 lg:mb-0
+    @apply w-full mt-3 bg-black text-white text-sm rounded-full transition-colors h-7 lg:h-9 lg:mt-4 duration-300 ease-in-out hover:bg-flame mb-10 lg:mb-0
+}
+
+/* Cart Popup */
+.cart__pop {
+    @apply bg-flame fixed top-10 lg:bottom-20 right-2 w-64 sm:w-72 h-20 rounded-lg sm:top-20 sm:h-24 flex flex-col items-center justify-center font-raleway sm:right-5
+}
+
+.cart__pop p {
+    @apply text-sm text-white font-semibold mb-1 sm:text-base
+}
+
+.cart__link {
+    @apply bg-white rounded-full py-1 px-2 text-flame text-sm
 }
