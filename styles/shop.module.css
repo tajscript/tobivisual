@@ -47,7 +47,7 @@
 }
 
 .image {
-    @apply w-full h-[22rem]
+    @apply w-full h-[22rem] sm:[21rem]
 }
 
 .product__index h3 {
