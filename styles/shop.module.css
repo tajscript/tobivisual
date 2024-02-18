@@ -27,7 +27,7 @@
 }
 
 .product {
-    @apply pt-16 md:pt-6 xl:pt-14
+    @apply pt-12 md:pt-6 xl:pt-10
 }
 
 .button__container {
@@ -47,7 +47,7 @@
 }
 
 .image {
-    @apply w-full h-80 lg:h-[21rem]
+    @apply w-full h-[22rem]
 }
 
 .product__index h3 {
