@@ -126,19 +126,19 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
 
         <div className={style.home__background}>
             <div className={`${style.background__image} ${style.image__rotate_4}`} ref={imageRef3}>
-            <PrismicNextImage field={slice.primary.background_image_3} className={style.image}  />
+            <PrismicNextImage field={slice.primary.background_image_3} priority className={style.image}  />
             </div>
             <div className={`${style.background__image} ${style.image__rotate_3}`} ref={imageRef2}>
-            <PrismicNextImage field={slice.primary.background_image} className={style.image}  />
+            <PrismicNextImage field={slice.primary.background_image} priority className={style.image}  />
             </div>
             <div className={`${style.background__image} ${style.image__rotate_2}`} ref={imageRef1}>
-            <PrismicNextImage field={slice.primary.background_image_3} className={style.image} />
+            <PrismicNextImage field={slice.primary.background_image_3} priority className={style.image} />
             </div>
             <div className={`${style.background__image} ${style.image__rotate_1}`} ref={imageRef}>
-            <PrismicNextImage field={slice.primary.background_image_2} className={style.image}/>
+            <PrismicNextImage field={slice.primary.background_image_2} priority className={style.image}/>
             </div>
             <div className={style.background__image}>
-            <PrismicNextImage field={slice.primary.background_image} className={style.image}/>
+            <PrismicNextImage field={slice.primary.background_image} priority className={style.image}/>
             </div>
         </div>
 
@@ -172,7 +172,7 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       <div className={style.work__wrapper} id="work" ref={workRef}>
         <div className={style.work__details}>
           <div className={style.work__image} ref={workDetailsRef}>
-          <PrismicNextImage field={slice.primary.work_image} className={style.work_image} />
+          <PrismicNextImage field={slice.primary.work_image} priority className={style.work_image} />
           </div>
           
           <div className={style.work__description}>
