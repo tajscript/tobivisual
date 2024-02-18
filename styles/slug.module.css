@@ -11,7 +11,7 @@
 }
 
 .image {
-    @apply w-full sm:w-[22rem] lg:w-96 xl:w-[28rem]
+    @apply w-full sm:w-[22rem] lg:w-96 xl:w-[30rem] xl:h-[34rem]
 }
 
 .details {
