@@ -15,5 +15,5 @@
 }
 
 .button {
-    @apply border-white border-2 w-24 h-8 rounded-lg sm:w-28 sm:h-9 transition-colors duration-300 ease-linear hover:bg-flame hover:border-flame hover:text-white flex items-center justify-center lg:w-32 lg:h-10 font-medium
+    @apply border-flame text-white bg-flame border-2 w-24 h-8 rounded-lg sm:w-28 sm:h-9 transition-colors duration-300 ease-linear hover:bg-white hover:text-flame flex items-center justify-center lg:w-32 lg:h-10 font-medium
 }

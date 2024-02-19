@@ -43,7 +43,7 @@
 }
 
 .image {
-    @apply w-80 h-96 xl:w-[26rem] xl:h-[28rem]
+    @apply w-80 h-96 xl:w-[26rem] xl:h-[28rem] rounded-lg
 }
 
 .image__rotate_4, .image__rotate_3, .image__rotate_2, .image__rotate_1 {
@@ -64,7 +64,7 @@
 
 /* About Styling */
 .about__wrapper {
-    @apply h-screen font-grotesk bg-black text-white w-full flex items-center px-3 sm:px-5 xl:px-20 overflow-hidden
+    @apply h-screen font-grotesk w-full flex items-center px-3 sm:px-5 xl:px-20 overflow-hidden
 }
 
 .about__details {
@@ -72,7 +72,7 @@
 }
 
 .about__text {
-    @apply border border-white w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg transition-all hover:bg-white hover:text-black duration-200 ease-linear
+    @apply border border-black w-28 h-28 rounded-full flex items-center justify-center font-semibold sm:w-32 sm:h-32 sm:text-lg transition-all hover:bg-flame hover:border-none hover:text-white duration-200 ease-linear
 }
 
 .about__descripton {
@@ -81,7 +81,7 @@
 
 /* Work Styling */
 .work__wrapper {
-    @apply h-full w-full xl:pr-10 pt-10 font-grotesk bg-black text-white lg:pt-0
+    @apply h-full w-full xl:pr-10 pt-10 font-grotesk lg:pt-0
 }
 
 .work__details {

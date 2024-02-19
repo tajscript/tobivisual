@@ -35,15 +35,15 @@
 }
 
 .image__wrapper {
-    @apply w-full lg:w-[50%]
+    @apply w-full lg:w-[40%] flex items-center justify-center
 }
 
 .image {
-    @apply w-[85%] h-full lg:w-full
+    @apply w-72 h-80 lg:w-96 lg:h-[26rem] rounded-full
 }
 
 .description {
-    @apply w-full lg:w-[50%] lg:pr-10
+    @apply w-full lg:w-[60%] lg:pr-10
 }
 
 .description p {
@@ -91,6 +91,6 @@
 }
 
 .r__image {
-    @apply sm:w-[70%] lg:w-[50%]
+    @apply sm:w-[70%] lg:w-[50%] sm:rounded-tl-3xl
 }
 

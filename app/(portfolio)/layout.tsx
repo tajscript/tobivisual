@@ -7,7 +7,7 @@ import { createClient } from '@/prismicio';
 import CustomCursor from "@/components/customCursor";
 
 
-import Favicon from "@/public/assets/favicon.ico"
+import Favicon from "@/public/assets/favicon.ico";
 
 const grotesk = Space_Grotesk({
   subsets: ['latin'],

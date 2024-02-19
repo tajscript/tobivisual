@@ -19,9 +19,7 @@ const config: Config = {
       colors: {
         'offgray': '#f1d302',
         'offwhite': '#D9D9D9',
-        'yellowGreen': '#A2D729',
-        'magenta': '#80475E',
-        'flame': '#EE6055'
+        'flame': '#864622'
       }
     },
   },
