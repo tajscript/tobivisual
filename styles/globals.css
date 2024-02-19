@@ -10,10 +10,6 @@ html {
   @apply scroll-smooth
 }
 
-.layout__cursor {
-  @apply lg:cursor-none
-}
-
 .layout__nav {
   @apply h-[5vh]
 }
