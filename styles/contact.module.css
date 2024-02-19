@@ -1,5 +1,5 @@
 .contact {
-    @apply w-full max-h-screen bg-black text-white
+    @apply w-full max-h-screen bg-white text-black
 }
 
 .wrapper {
@@ -23,7 +23,7 @@
 }
 
 .commission {
-    @apply border-b-2 border-white flex flex-col sm:flex-row px-3 w-full justify-between sm:uppercase
+    @apply border-b-2 border-black flex flex-col sm:flex-row px-3 w-full justify-between sm:uppercase
 }
 
 .social__wrapper {
@@ -31,7 +31,7 @@
 }
 
 .social {
-    @apply border-white border-2 text-white w-full text-center flex justify-center items-center h-10 rounded-full text-sm transition-colors ease-linear duration-300 delay-200 hover:bg-white hover:text-black sm:h-12
+    @apply border-black border-2 text-black w-full text-center flex justify-center items-center h-10 rounded-full text-sm transition-colors ease-linear duration-300 delay-200 hover:bg-flame hover:text-white sm:h-12
 }
 
 .shop__wrapper {
@@ -39,5 +39,5 @@
 }
 
 .flame {
-    @apply border-flame bg-flame hover:bg-black hover:text-white
+    @apply border-flame bg-flame text-white
 }

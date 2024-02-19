@@ -80,6 +80,14 @@ html {
   @apply translate-x-0 text-opacity-100
 }
 
+.dropdown {
+  @apply hidden
+}
+
+.dropdown.open {
+  @apply block
+}
+
 /* Swiper */
 .swiper-button-next, .swiper-button-prev {
   @apply after:text-black after:hidden after:sm:block

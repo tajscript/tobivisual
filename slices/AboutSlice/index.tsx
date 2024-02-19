@@ -90,7 +90,8 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
 
           <div className={style.about__details} id="details">
             <div className={style.image__wrapper}>
-            <PrismicNextImage field={slice.primary.image} className={style.image} />
+              <div className={style.image} style={{ backgroundImage: 'url(' + slice.primary.image.url + ')' }}>
+              </div>
             </div>
             <div className={style.description}>
               <p>{slice.primary.image_description}</p>
