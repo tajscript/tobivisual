@@ -61,7 +61,7 @@ const page = () => {
                 <button type="submit">REGISTER</button>
             </form>
 
-            <p>Have an account? <span><Link href="/">LOGIN</Link></span></p>
+            <p>Have an account? <span><Link href="/login">LOGIN</Link></span></p>
         </div>
     </div>
   )

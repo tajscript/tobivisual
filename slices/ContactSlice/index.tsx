@@ -76,7 +76,7 @@ const ContactSlice = ({ slice }: ContactSliceProps): JSX.Element => {
           </div>
 
           <div className={style.shop__wrapper}>
-            <Link href="/" className={`${style.social} ${style.flame}`}>{slice.primary.shop_text}</Link>
+            <Link href="/shop" className={`${style.social} ${style.flame}`}>{slice.primary.shop_text}</Link>
           </div>
           </div>
 
