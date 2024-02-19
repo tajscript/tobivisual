@@ -20,8 +20,12 @@ const page: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onCl
             <button className={`${style.link} ${style.portfolio}`} onClick={handleDropdown}>PORTFOLIO <span><GoChevronDown /></span></button>
             <div className={`dropdown ${dropdown ? 'open' : ''}`}>
               <div className={style.dropdown__wrapper}>
-              <Link href="/work"  className={style.drop_link}>WORK</Link>
-              <Link href="/digital-art"  className={style.drop_link}>DIGITAL ART</Link>
+              <Link href="/work"  className={style.drop_link}>Traditional Art</Link>
+              <Link href="/digital-art"  className={style.drop_link}>Digital Art</Link>
+              <Link href="/"  className={style.drop_link}>Potraits</Link>
+              <Link href="/"  className={style.drop_link}>Commissions</Link>
+              <Link href="/"  className={style.drop_link}>Studies</Link>
+              <Link href="/"  className={style.drop_link}>Covers</Link>
               </div>
             </div>
             <Link href="/contact"  className={style.link}>CONTACT</Link>
