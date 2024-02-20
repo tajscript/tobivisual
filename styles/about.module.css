@@ -43,11 +43,11 @@
 }
 
 .description {
-    @apply w-full xl:w-[60%] lg:px-10
+    @apply w-full xl:w-[60%]
 }
 
 .description p {
-    @apply text-sm pl-10 font-grotesk sm:pl-24 sm:text-base md:pl-0
+    @apply text-sm pl-10 font-grotesk sm:pl-24 sm:text-base md:pl-0 md:px-10 xl:px-0
 }
 
 .visual__container {
@@ -83,7 +83,7 @@
 }
 
 .detail__text p {
-    @apply font-grotesk px-5 text-sm sm:text-base sm:px-0
+    @apply font-grotesk px-5 text-sm sm:text-base sm:px-0 md:px-10 xl:px-0
 }
 
 .detail__image {

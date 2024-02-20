@@ -1,5 +1,5 @@
 .payment {
-    @apply w-full min-h-[89vh] font-grotesk relative px-3 pb-10 pt-20 sm:px-5 lg:px-10
+    @apply w-full min-h-[95vh] font-grotesk relative px-3 pb-10 pt-20 sm:px-5 lg:px-10
 }
 
 .wrapper {
