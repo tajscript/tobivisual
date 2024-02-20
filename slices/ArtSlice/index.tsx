@@ -7,10 +7,10 @@ import style from "@/styles/art.module.css";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
 import 'swiper/css';
-import { Scrollbar, Autoplay } from 'swiper/modules';
-import 'swiper/css/scrollbar';
-import { useState } from "react";
+import { Autoplay } from 'swiper/modules';
+import { SetStateAction, useState } from "react";
 import FolioNav from "@/components/folioNav";
 import CurrentTime from "@/components/currentTime";
 
@@ -24,6 +24,12 @@ export type ArtSliceProps = SliceComponentProps<Content.ArtSliceSlice>;
  */
 const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const [activeItemIndex, setActiveItemIndex] = useState(0);
+
+  const handleSlideChange = (swiper: SwiperCore) => {
+    setActiveItemIndex(swiper.realIndex);
+    console.log('Active slide index:', swiper.realIndex);
+  };
 
   const handleNavOpen = () => {
     setIsNavOpen(!isNavOpen)
@@ -47,44 +53,41 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
           <Link href="/" className={style.nav__text}>{slice.primary.shop_text}</Link>
         </nav>
 
+        <div className={style.art__container}>
         <div className={style.container}>
-          <div className={style.art__text}>
-            <h4>DIGITAL</h4>
-            <h4>ART</h4>
+        <div className={style.art__text}>
+                <h4>DIGITAL</h4>
+                <h4>ART</h4>
           </div>
 
-          <Swiper
+        <Swiper
               className={style.image__wrapper}
-              slidesPerView={1.2}
-              spaceBetween={10}
+              slidesPerView={5}
+              spaceBetween={5}
               draggable={true}
               mousewheel={true}
               loop={true}
               autoplay={{
                 delay: 1000,
-                disableOnInteraction: false,
+
                 pauseOnMouseEnter: true
               }}
               breakpoints={{
                 640: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 10,
+                  slidesPerView: 7,
                 },
                 768: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 20,
+                  slidesPerView: 7,
                 },
                 1024: {
-                  slidesPerView: 3.5,
-                  spaceBetween: 30,
+                  slidesPerView: 7,
                 },
                 1440: {
-                  slidesPerView: 5,
-                  spaceBetween: 30,
+                  slidesPerView: 12,
                 },
               }}
-              modules={[Scrollbar, Autoplay]}
-              scrollbar
+              modules={[Autoplay]}
+              onSlideChange={handleSlideChange}
               >
                 {slice.items.map((item, index) => (
                   <SwiperSlide key={index} className={style.image__container}>
@@ -92,6 +95,12 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
                   </SwiperSlide>
                 ))}
             </Swiper>
+            </div>
+
+          {/* Display the currently active item in a larger div */}
+          <div className={style.largerDiv}>
+              <PrismicNextImage field={slice.items[activeItemIndex]?.image} className={style.largeImage} priority />
+          </div>
 
           </div>
           </div>

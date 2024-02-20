@@ -11,15 +11,15 @@
 }
 
 .real__time {
-    @apply flex items-center text-sm sm:text-base
+    @apply flex items-center sm:text-lg md:text-xl lg:text-lg
 }
 
 .real__time span {
-    @apply font-semibold px-1 text-sm sm:text-base
+    @apply font-semibold px-1 
 }
 
 .nav__text {
-    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame
+    @apply font-medium font-grotesk sm:text-lg md:text-xl lg:text-lg transition-colors duration-200 ease-in-out hover:text-flame 
 }
 
 .home__wrapper {
@@ -39,19 +39,19 @@
 }
 
 .background__image {
-    @apply absolute
+    @apply absolute rounded-lg
 }
 
 .image {
-    @apply w-80 h-96 xl:w-[26rem] xl:h-[28rem] rounded-lg
+    @apply w-80 h-96 md:w-[35rem] md:h-[37rem] lg:w-[43rem] lg:h-[45rem] xl:w-[26rem] xl:h-[28rem] rounded-lg
 }
 
 .image__rotate_4, .image__rotate_3, .image__rotate_2, .image__rotate_1 {
-    @apply hidden sm:block
+    @apply hidden xl:block
 }
 
 .home__title {
-    @apply absolute w-full text-7xl flex gap-10 justify-center sm:text-9xl font-grotesk
+    @apply absolute w-full text-7xl flex gap-10 justify-center sm:text-9xl md:text-[12rem] font-grotesk xl:text-9xl
 }
 
 .home__description {
@@ -59,12 +59,12 @@
 }
 
 .home__description p {
-    @apply w-full text-center sm:w-[55%] lg:w-[40%]
+    @apply w-full text-center sm:w-[55%] lg:w-[60%] xl:w-[40%]
 }
 
 /* About Styling */
 .about__wrapper {
-    @apply h-screen font-grotesk w-full flex items-center px-3 sm:px-5 xl:px-20 overflow-hidden
+    @apply h-screen font-grotesk w-full flex items-center px-3 sm:px-5 xl:px-20 overflow-hidden md:h-full xl:h-screen md:py-32
 }
 
 .about__details {
@@ -85,15 +85,19 @@
 }
 
 .work__details {
-    @apply flex flex-col-reverse gap-20 md:gap-10 md:flex-row xl:gap-0
+    @apply block space-y-20
 }
 
 .work__image {
-    @apply w-full md:w-[50%] md:mt-80
+    @apply w-full md:w-[70%]
 }
 
 .work__description {
-    @apply w-full px-3 md:w-[50%] md:px-5 lg:px-10 xl:px-20  
+    @apply w-full flex flex-col justify-end items-end
+}
+
+.work__desc {
+    @apply w-full px-3 md:w-[80%] md:px-5 lg:px-10 xl:px-20 xl:w-[60%]
 }
 
 .work__description p {
@@ -105,5 +109,5 @@
 }
 
 .work__line {
-    @apply h-1 bg-flame w-32 mx-auto
+    @apply h-1 bg-flame w-full mx-auto
 }

@@ -1,7 +1,7 @@
 /* Cart Design */
 
 .cart {
-    @apply absolute z-50 right-0 h-screen overflow-hidden
+    @apply absolute z-50 right-0 h-screen md:min-h-screen overflow-hidden xl:h-screen
 }
 
 .cart__color {
@@ -25,7 +25,7 @@
 }
 
 .container__cart {
-    @apply h-[80%] w-full overflow-auto xl:h-[90%]
+    @apply h-[80%] w-full overflow-auto md:h-[90%]
 }
 
 .cart__checkout {
@@ -73,7 +73,7 @@
 }
 
 .checkout {
-    @apply block space-y-3 w-full h-[20%] xl:h-[10%]
+    @apply block space-y-3 w-full h-[20%] md:h-[10%]
 }
 
 .checkout__wrapper {
@@ -85,5 +85,5 @@
 }
 
 .checkout__button {
-    @apply bg-black text-white flex items-center w-full justify-center h-8 text-sm transition-colors duration-300 ease-in-out hover:bg-flame
+    @apply bg-flame text-white flex items-center w-full justify-center h-8 text-sm transition-colors duration-300 ease-in-out hover:bg-black
 }

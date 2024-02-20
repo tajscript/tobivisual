@@ -1,5 +1,5 @@
 .nav {
-    @apply w-full border-b border-black px-2 sm:px-5 lg:px-10 relative
+    @apply w-full border-b border-black px-2 sm:px-5 lg:px-10 relative md:text-xl xl:text-base
 }
 
 .wrapper {

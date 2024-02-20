@@ -53,10 +53,30 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
     }, {
       scrollTrigger: {
           trigger: lineRef.current, 
-          scrub: 2, 
+          scrub: true, 
           end: "bottom top"
       },
       yPercent: 0,
+      duration: 2,
+      yoyo: true,
+    })
+
+    gsap.fromTo("#details__image", {xPercent: 30}, {
+      scrollTrigger: {
+          trigger: "#details__about", 
+          scrub: true, 
+      },
+      xPercent: 0,
+      duration: 2,
+      yoyo: true,
+    })
+
+    gsap.fromTo("#details__text", {xPercent: -50}, {
+      scrollTrigger: {
+          trigger: "#visual", 
+          scrub: true, 
+      },
+      xPercent: 0,
       duration: 2,
       yoyo: true,
     })
@@ -98,7 +118,7 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
             </div>
           </div>
 
-          <div className={style.visual__container}>
+          <div className={style.visual__container} id="visual">
               <div className={style.visual__text}>
                 <h3 id="text_l">{slice.primary.visual_text}</h3>
                 <h3 className={style.visual__text_r} id="text_r">{slice.primary.artist_text}</h3>
@@ -113,11 +133,11 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
           </div>
 
           <div className={style.details__about} id="details__about">
-            <div className={style.detail__text}>
+            <div className={style.detail__text} id="details__text">
               <p>{slice.primary.description}</p>
             </div>
 
-            <div className={style.detail__image}>
+            <div className={style.detail__image} id="details__image">
               <PrismicNextImage field={slice.primary.footer_image} className={style.r__image} />
             </div>
           </div>

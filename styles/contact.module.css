@@ -7,35 +7,35 @@
 }
 
 .nav {
-    @apply bg-transparent font-grotesk flex items-center justify-between px-3 sm:px-5 xl:px-20 py-3 relative h-[10vh]
+    @apply bg-transparent font-grotesk flex items-center justify-between px-3 sm:px-5 xl:px-10  py-3 relative h-[5vh]
 }
 
 .nav__text {
-    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame
+    @apply font-medium font-grotesk sm:text-lg transition-colors duration-200 ease-in-out hover:text-flame md:text-xl lg:text-lg
 }
 
 .container {
-    @apply h-[90vh] flex flex-col justify-between font-grotesk pb-5
+    @apply h-[95vh] flex flex-col justify-between font-grotesk pb-5
 }
 
 .container h3 {
-    @apply pt-10 text-center text-5xl sm:text-7xl lg:text-8xl lg:pt-16
+    @apply pt-10 text-center text-5xl sm:text-7xl md:text-9xl font-grotesk xl:text-8xl lg:pt-16
 }
 
 .commission {
-    @apply border-b-2 border-black flex flex-col sm:flex-row px-3 w-full justify-between sm:uppercase
+    @apply border-b-2 border-black flex flex-col sm:flex-row px-3 w-full justify-between sm:uppercase md:text-2xl lg:text-3xl xl:text-xl
 }
 
 .social__wrapper {
-    @apply grid w-full px-3 sm:px-10 lg:px-20 grid-cols-2 gap-5 md:grid-cols-4
+    @apply grid w-full px-3 sm:px-10 grid-cols-2 gap-5 md:grid-cols-4
 }
 
 .social {
-    @apply border-black border-2 text-black w-full text-center flex justify-center items-center h-10 rounded-full text-sm transition-colors ease-linear duration-300 delay-200 hover:bg-flame hover:text-white sm:h-12
+    @apply border-black border-2 text-black w-full text-center flex justify-center items-center h-10 rounded-full text-sm transition-colors ease-linear duration-300 delay-200 hover:bg-flame hover:border-flame hover:text-white sm:h-12 md:h-14 xl:h-12
 }
 
 .shop__wrapper {
-    @apply mt-5 w-full px-3 sm:px-10 lg:px-20
+    @apply mt-5 w-full px-3 sm:px-10
 }
 
 .flame {

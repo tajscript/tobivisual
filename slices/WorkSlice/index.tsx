@@ -20,7 +20,7 @@ export type WorkSliceProps = SliceComponentProps<Content.WorkSliceSlice>;
  * Component for "WorkSlice" Slices.
  */
 const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
-  const [isNavOpen, setIsNavOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const workRef = useRef(null);
   
   const handleNavOpen = () => {
@@ -32,14 +32,67 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
   }
 
   useLayoutEffect(() => {
-
     let work = gsap.context(() => {
     gsap.to(workRef.current, {duration: 1, opacity: 1})})
 
-    gsap.to( ["#mission"], {
+    gsap.utils.toArray<HTMLElement>('#details').forEach((item) => {
+      gsap.fromTo(
+        item,
+        {
+          xPercent: -50,
+        },
+        {
+          scrollTrigger: {
+            trigger: item,
+            scrub: true
+          },
+          duration: 1,
+          ease: 'power3',
+          yoyo: true,
+          xPercent: 0,
+        }
+      );
+    });
+
+
+    gsap.utils.toArray<HTMLElement>('#images').forEach((item) => {
+      gsap.fromTo(
+        item,
+        {
+          xPercent: 50,
+        },
+        {
+          scrollTrigger: {
+            trigger: item,
+            scrub: true
+          },
+          duration: 1,
+          ease: 'power3',
+          yoyo: true,
+          xPercent: 0,
+        }
+      );
+    });
+
+    gsap.utils.toArray<HTMLElement>('#line').forEach((item) => {
+      gsap.to(item, {
+        scrollTrigger: {
+            trigger: item,
+            scrub: true,
+        },
+        scaleX: 25,
+        duration: 2.5,
+        delay: 1.5,
+        yoyo: true,
+    })
+    });
+
+    
+
+    gsap.to("#mission", {
         scrollTrigger: {
             trigger: "#mission",
-            scrub: 1,
+            scrub: true,
             end: "bottom bottom",
         },
         backgroundColor: "black",
@@ -48,23 +101,12 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
         yoyo: true
     })
 
-    gsap.to( ["#line"], {
-        scrollTrigger: {
-            trigger: "#image",
-            scrub: 1,
-        },
-        scaleX: 25,
-        duration: 2.5,
-        delay: 1.5,
-        yoyo: true,
-    })
-
     gsap.fromTo("#mission-text", {
       yPercent: 50
     }, {
       scrollTrigger: {
           trigger: "#mission", 
-          scrub: 2, 
+          scrub: true, 
       },
       yPercent: 0,
       duration: 1,
@@ -106,15 +148,15 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
           <h3 id="mission-text">{slice.primary.mission}</h3>
         </div>
 
-        <div className={style.slices} id="container">
+        <div className={style.slices}>
           {slice.items.map((item, index) => (
           <div className={style.slice__wrapper} key={index} id="slice">
-            <div className={style.slice__details}>
+            <div className={style.slice__details} id="details">
               <h3>{item.art}</h3>
               <h4>{item.art_type}</h4>
               <p>{item.art_description}</p>
             </div>
-            <div className={style.slice__image} id="image">
+            <div className={style.slice__image} id="images">
             <PrismicNextImage field={item.art_image} className={style.image__slice} priority />
             </div>
             <div className={style.line} id="line"></div>

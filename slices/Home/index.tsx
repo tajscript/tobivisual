@@ -58,13 +58,33 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
     
 
     gsap.fromTo(aboutRef.current, {
-      yPercent: 50
+      yPercent: 30
     }, {
       scrollTrigger: {
           trigger: colorRef.current, 
-          scrub: 2, 
+          scrub: 1, 
       },
       yPercent: 0,
+      duration: 2,
+      yoyo: true,
+    })
+
+    gsap.fromTo(workDetailsRef.current, {xPercent: -50}, {
+      scrollTrigger: {
+          trigger: workRef.current, 
+          scrub: 1, 
+      },
+      xPercent: 0,
+      duration: 2,
+      yoyo: true,
+    })
+
+    gsap.fromTo("#work_desc", {xPercent: 80}, {
+      scrollTrigger: {
+          trigger: aboutRef.current, 
+          scrub: 1, 
+      },
+      xPercent: 0,
       duration: 2,
       yoyo: true,
     })
@@ -76,14 +96,6 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       ease: "none",
       yoyo: true
   });
-
-  gsap.to("#line", {
-    scaleX: 5,
-    duration: 5,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut"
-  })
 
     return () => {
         hero.revert();
@@ -171,16 +183,19 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       {/* Work Section */}
       <div className={style.work__wrapper} id="work" ref={workRef}>
         <div className={style.work__details}>
-          <div className={style.work__image} ref={workDetailsRef}>
-          <PrismicNextImage field={slice.primary.work_image} priority className={style.work_image} />
-          </div>
           
-          <div className={style.work__description}>
-          <div className={style.work__line} id="line" />
-            <p>
-            {slice.primary.work_description}
-            </p>
-          <div className={style.work__line} id="line" />
+          <div className={style.work__description} id="work_desc">
+            <div className={style.work__desc}>
+              <div className={style.work__line} id="line" />
+                <p>
+                  {slice.primary.work_description}
+                </p>
+              <div className={style.work__line} id="line" />
+            </div>
+          </div>
+
+          <div className={style.work__image} ref={workDetailsRef}>
+            <PrismicNextImage field={slice.primary.work_image} priority className={style.work_image} />
           </div>
           
         </div>

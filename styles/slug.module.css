@@ -1,21 +1,21 @@
 .slug {
-    @apply w-full min-h-[89vh] xl:overflow-hidden font-grotesk relative lg:h-[89vh]
+    @apply w-full min-h-[89vh] xl:overflow-hidden font-grotesk relative xl:h-[89vh]
 }
 
 .wrapper {
-    @apply w-full px-3 py-5 gap-2 sm:gap-5 sm:p-10 lg:p-20 h-full flex flex-col items-center justify-center md:flex-row
+    @apply w-full px-3 py-5 gap-2 sm:gap-5 sm:p-10 lg:p-20 h-full flex flex-col items-center justify-center xl:flex-row
 }
 
 .image__wrapper {
-    @apply w-full md:w-[50%] flex items-center justify-center
+    @apply w-full xl:w-[50%] flex items-center justify-center
 }
 
 .image {
-    @apply w-full sm:w-[22rem] sm:h-[25rem] lg:w-96 lg:h-[26rem] xl:w-[30rem] xl:h-[34rem]
+    @apply w-full sm:w-[22rem] sm:h-[25rem] md:w-[40rem] md:h-[41rem] xl:w-[30rem] xl:h-[34rem]
 }
 
 .details {
-    @apply w-full flex flex-col md:flex-col-reverse items-center md:w-[50%] md:gap-10
+    @apply w-full flex flex-col md:flex-col-reverse items-center xl:w-[50%] md:gap-10
 }
 
 .title {

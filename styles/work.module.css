@@ -15,15 +15,15 @@
 }
 
 .container {
-    @apply w-full font-raleway mb-10 px-5 pt-10 h-[90vh] flex gap-5 flex-col sm:px-10 lg:flex-row md:items-center lg:pt-10 xl:px-20 xl:gap-10
+    @apply w-full font-raleway mb-10 px-5 pt-10 h-[90vh] flex gap-5 flex-col sm:px-10 xl:flex-row md:items-center xl:pt-10 xl:px-20 xl:gap-10
 }
 
 .image__wrapper {
-    @apply w-full h-full bg-cover bg-center bg-no-repeat lg:w-[60%] xl:w-[50%]
+    @apply w-full h-full bg-cover bg-center bg-no-repeat xl:w-[50%]
 }
 
 .details {
-    @apply w-full  flex flex-col items-center lg:w-[40%] xl:w-[50%]
+    @apply w-full flex flex-col items-center xl:w-[50%]
 }
 
 .details h3 {

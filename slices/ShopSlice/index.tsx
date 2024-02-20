@@ -34,12 +34,12 @@ const ProductSection = ({ products }: { products: any[] }) => {
         spaceBetween: 10,
       },
       768: {
-        slidesPerView: 2.5,
+        slidesPerView: 1.1,
         spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 3.5,
-        spaceBetween: 20,
+        slidesPerView: 1.2,
+        spaceBetween: 40,
       },
       1440: {
         slidesPerView: 4.5,
