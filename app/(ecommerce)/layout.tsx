@@ -4,7 +4,7 @@ import ReduxProvider from '@/state/ReduxProvider';
 import '@/styles/globals.css';
 
 export const metadata = {
-  title: 'Shop - Tobi Adetimehin',
+  title: 'Account - Tobi Adetimehin',
   description: "I'm a visual artist, and my work serve as a vessel for personal growth, and healing.",
 }
 

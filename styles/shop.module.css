@@ -3,11 +3,11 @@
 }
 
 .wrapper {
-    @apply w-full h-full block pt-10
+    @apply w-full h-full block pt-5 sm:pt-10
 }
 
 .title__wrapper {
-    @apply relative w-full pt-12 lg:pt-10
+    @apply relative w-full pt-5 sm:pt-10
 }
 
 .title__display {
@@ -39,7 +39,7 @@
 }
 
 .product__wrapper {
-    @apply pl-3 mt-14 mb-10 flex h-[26rem] w-full flex-row gap-2 sm:px-10 lg:mt-6 sm:gap-4 lg:gap-5 items-center md:h-full md:pt-20 md:pb-10 xl:pb-0 xl:pt-0
+    @apply pl-3 mt-14 mb-10 flex h-[28rem] w-full flex-row gap-2 sm:px-10 lg:mt-6 sm:gap-4 lg:gap-5 items-center md:h-full md:pt-20 md:pb-10 xl:pb-0 xl:pt-0
 }
 
 .product__index {
@@ -47,7 +47,7 @@
 }
 
 .image {
-    @apply w-full h-[23rem] sm:h-[21rem] md:h-[50rem] xl:h-[22rem]
+    @apply w-full h-[24rem] sm:h-[21rem] md:h-[30rem] lg:h-[40rem] xl:h-[23rem]
 }
 
 .product__index h3 {

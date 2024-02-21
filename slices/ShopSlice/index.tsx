@@ -34,12 +34,12 @@ const ProductSection = ({ products }: { products: any[] }) => {
         spaceBetween: 10,
       },
       768: {
-        slidesPerView: 1.1,
+        slidesPerView: 1.8,
         spaceBetween: 20,
       },
       1024: {
-        slidesPerView: 1.2,
-        spaceBetween: 40,
+        slidesPerView: 1.8,
+        spaceBetween: 20,
       },
       1440: {
         slidesPerView: 4.5,
@@ -51,7 +51,7 @@ const ProductSection = ({ products }: { products: any[] }) => {
       {products.map((item, index) => item && (
         <SwiperSlide key={index}>
         <Link href={`/shop/${item.slug}`} className={style.product__index}>
-          <PrismicNextImage field={item.data.image} className={style.image} priority />
+          <PrismicNextImage field={item.data.image} className={style.image} />
           <h3>{item.data.title}</h3>
           <h4>₦{item.data.amount}</h4>
         </Link>

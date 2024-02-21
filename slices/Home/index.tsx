@@ -45,8 +45,7 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
   useLayoutEffect(() => {
 
     let hero = gsap.context(() => {
-      gsap.to(heroRef.current, {duration: 1, opacity: 1})})
-
+      gsap.to(heroRef.current, {duration: 0.3, opacity: 1, ease: 'expo.in'})
 
       gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 1.5, x: 10, y: -10 })
 
@@ -95,7 +94,8 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       duration: 10, 
       ease: "none",
       yoyo: true
-  });
+    });
+  })
 
     return () => {
         hero.revert();

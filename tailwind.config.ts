@@ -17,9 +17,10 @@ const config: Config = {
         cute: ['var(--font-cute)'],
       },
       colors: {
-        'offgray': '#f1d302',
-        'offwhite': '#D9D9D9',
-        'flame': '#864622'
+        'offblack': '#0e1111',
+        'offwhite': '#f9f9f9',
+        // Color Name is Woodlands
+        'flame': '#455947',
       }
     },
   },

@@ -38,7 +38,7 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
   useLayoutEffect(() => {
 
     let about = gsap.context(() => {
-    gsap.to(aboutRef.current, {duration: 1, opacity: 1})})
+    gsap.to(aboutRef.current, {duration: 0.5, opacity: 1})
 
     gsap.to(lineRef.current, {
       scaleX: 10,
@@ -80,6 +80,7 @@ const AboutSlice = ({ slice }: AboutSliceProps): JSX.Element => {
       duration: 2,
       yoyo: true,
     })
+  })
 
     return () => {
       about.revert();

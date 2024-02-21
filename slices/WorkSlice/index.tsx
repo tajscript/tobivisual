@@ -33,7 +33,7 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
 
   useLayoutEffect(() => {
     let work = gsap.context(() => {
-    gsap.to(workRef.current, {duration: 1, opacity: 1})})
+    gsap.to(workRef.current, {duration: 1, opacity: 1})
 
     gsap.utils.toArray<HTMLElement>('#details').forEach((item) => {
       gsap.fromTo(
@@ -95,8 +95,8 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
             scrub: true,
             end: "bottom bottom",
         },
-        backgroundColor: "black",
-        color: "white",
+        backgroundColor: "#0e1111",
+        color: "#f9f9f9",
         duration: 2,
         yoyo: true
     })
@@ -112,6 +112,7 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
       duration: 1,
       yoyo: true,
     })
+  })
 
     return () => {
       work.revert();

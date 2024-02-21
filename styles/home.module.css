@@ -23,7 +23,7 @@
 }
 
 .home__wrapper {
-    @apply bg-white text-black w-full overflow-hidden h-screen flex justify-between flex-col
+    @apply w-full overflow-hidden h-screen flex justify-between flex-col
 }
 
 .footer__text {
@@ -47,7 +47,7 @@
 }
 
 .image__rotate_4, .image__rotate_3, .image__rotate_2, .image__rotate_1 {
-    @apply hidden xl:block
+    @apply hidden md:block
 }
 
 .home__title {
@@ -55,7 +55,7 @@
 }
 
 .home__description {
-    @apply w-full px-2 mt-10 py-2 border-b-2 border-black mb-2 flex items-center justify-center
+    @apply w-full px-2 mt-10 py-2 border-b-2 border-offblack mb-2 flex items-center justify-center
 }
 
 .home__description p {

@@ -28,7 +28,6 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
 
   const handleSlideChange = (swiper: SwiperCore) => {
     setActiveItemIndex(swiper.realIndex);
-    console.log('Active slide index:', swiper.realIndex);
   };
 
   const handleNavOpen = () => {
@@ -50,7 +49,7 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
       <nav className={style.nav}>
           <button className={style.nav__text} onClick={handleNavOpen}>{slice.primary.home_text}</button>
           <div className={style.real__time}>NG, <span><CurrentTime /></span></div>
-          <Link href="/" className={style.nav__text}>{slice.primary.shop_text}</Link>
+          <Link href="/shop" className={style.nav__text}>{slice.primary.shop_text}</Link>
         </nav>
 
         <div className={style.art__container}>

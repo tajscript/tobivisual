@@ -10,6 +10,10 @@ html {
   @apply scroll-smooth
 }
 
+body {
+  @apply bg-offwhite text-offblack
+}
+
 .layout__nav {
   @apply h-[5vh]
 }
@@ -24,7 +28,7 @@ html {
 
 /* Cart Design */
 .cart__wrapper {
-  @apply fixed bg-white pr-5 h-full w-full right-0 sm:w-96 md:w-[30rem] translate-x-[100%] transition-transform duration-500 ease-in-out xl:w-[26rem]
+  @apply fixed bg-offwhite pr-5 h-full w-full right-0 sm:w-96 md:w-[30rem] translate-x-[100%] transition-transform duration-500 ease-in-out xl:w-[26rem]
 }
 
 .cart__wrapper > P {
@@ -52,7 +56,7 @@ html {
   height: 40px;
   padding: 2px;
   background-color: transparent;
-  border: 2px solid #864622;
+  border: 2px solid #455947;
   border-radius: 50%;
   z-index: 999;
   pointer-events: none;
