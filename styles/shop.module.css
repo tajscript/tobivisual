@@ -7,7 +7,7 @@
 }
 
 .title__wrapper {
-    @apply relative w-full pt-5 sm:pt-10
+    @apply relative w-full pt-5 sm:pt-10 md:pt-16 xl:pt-6
 }
 
 .title__display {
