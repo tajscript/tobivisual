@@ -51,7 +51,7 @@ const ProductSection = ({ products }: { products: any[] }) => {
       {products.map((item, index) => item && (
         <SwiperSlide key={index}>
         <Link href={`/shop/${item.slug}`} className={style.product__index}>
-          <PrismicNextImage field={item.data.image} className={style.image} />
+          <PrismicNextImage field={item.data.image} className={style.image} priority />
           <h3>{item.data.title}</h3>
           <h4>₦{item.data.amount}</h4>
         </Link>
