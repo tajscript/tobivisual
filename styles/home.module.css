@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-    @apply block relative w-full h-full overflow-hidden opacity-0
+    @apply block relative w-full h-full overflow-hidden
 }
 
 .nav {
