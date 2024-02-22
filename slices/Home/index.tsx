@@ -46,13 +46,13 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
 
     let hero = gsap.context(() => {
 
-      gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 1.5, x: 10, y: -10 })
+      gsap.fromTo(imageRef.current, {x: 0, y: 0}, {duration: 1.5, delay: 0.5, x: 10, y: -10 })
 
-      gsap.fromTo(imageRef1.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 20, y: -20 })
+      gsap.fromTo(imageRef1.current, {x: 0, y: 0}, {duration: 1.5, delay: 1, x: 20, y: -20 })
 
-      gsap.fromTo(imageRef2.current, {x: 0, y: 0}, {duration: 1.5, delay: 2.5, x: 30, y: -30 })
+      gsap.fromTo(imageRef2.current, {x: 0, y: 0}, {duration: 1.5, delay: 1.5, x: 30, y: -30 })
 
-      gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 3, x: 40, y: -40 })
+      gsap.fromTo(imageRef3.current, {x: 0, y: 0}, {duration: 1.5, delay: 2, x: 40, y: -40 })
     
 
     gsap.fromTo(aboutRef.current, {
