@@ -33,7 +33,6 @@ const WorkSlice = ({ slice }: WorkSliceProps): JSX.Element => {
 
   useLayoutEffect(() => {
     let work = gsap.context(() => {
-    gsap.to(workRef.current, {duration: 1, opacity: 1})
 
     gsap.utils.toArray<HTMLElement>('#details').forEach((item) => {
       gsap.fromTo(
