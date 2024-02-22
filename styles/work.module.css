@@ -55,7 +55,7 @@
 }
 
 .slice__image {
-    @apply w-80 h-96 sm:w-96 sm:h-[28rem] border border-offblack rounded-lg p-2 lg:w-[30rem] lg:h-[35rem]
+    @apply w-80 h-96 sm:w-96 sm:h-[28rem] rounded-lg lg:w-[30rem] lg:h-[35rem]
 }
 
 .image__slice {
