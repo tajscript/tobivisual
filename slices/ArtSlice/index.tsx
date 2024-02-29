@@ -55,8 +55,8 @@ const ArtSlice = ({ slice }: ArtSliceProps): JSX.Element => {
         <div className={style.art__container}>
         <div className={style.container}>
         <div className={style.art__text}>
-                <h4>DIGITAL</h4>
-                <h4>ART</h4>
+                <h4>{slice.primary.digital_text}</h4>
+                <h4>{slice.primary.art_text}</h4>
           </div>
 
         <Swiper

@@ -126,6 +126,71 @@ interface ArtDocumentData {
 export type ArtDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<ArtDocumentData>, "art", Lang>;
 
+type CommissionsDocumentDataSlicesSlice = CommissionSliceSlice;
+
+/**
+ * Content for Commissions documents
+ */
+interface CommissionsDocumentData {
+  /**
+   * Slice Zone field in *Commissions*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commissions.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<CommissionsDocumentDataSlicesSlice> /**
+   * Meta Description field in *Commissions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: commissions.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Commissions*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commissions.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Commissions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: commissions.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Commissions document from Prismic
+ *
+ * - **API ID**: `commissions`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CommissionsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<CommissionsDocumentData>,
+    "commissions",
+    Lang
+  >;
+
 type ContactDocumentDataSlicesSlice = ContactSliceSlice;
 
 /**
@@ -188,6 +253,71 @@ export type ContactDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
     Simplify<ContactDocumentData>,
     "contact",
+    Lang
+  >;
+
+type CoversDocumentDataSlicesSlice = CoverSliceSlice;
+
+/**
+ * Content for Covers documents
+ */
+interface CoversDocumentData {
+  /**
+   * Slice Zone field in *Covers*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: covers.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<CoversDocumentDataSlicesSlice> /**
+   * Meta Description field in *Covers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: covers.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Covers*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: covers.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Covers*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: covers.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Covers document from Prismic
+ *
+ * - **API ID**: `covers`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CoversDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<CoversDocumentData>,
+    "covers",
     Lang
   >;
 
@@ -354,6 +484,71 @@ export type HomepageDocument<Lang extends string = string> =
     Lang
   >;
 
+type PotraitsDocumentDataSlicesSlice = PotraitSliceSlice;
+
+/**
+ * Content for Potraits documents
+ */
+interface PotraitsDocumentData {
+  /**
+   * Slice Zone field in *Potraits*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potraits.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PotraitsDocumentDataSlicesSlice> /**
+   * Meta Description field in *Potraits*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: potraits.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Potraits*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potraits.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Potraits*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: potraits.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Potraits document from Prismic
+ *
+ * - **API ID**: `potraits`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PotraitsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<PotraitsDocumentData>,
+    "potraits",
+    Lang
+  >;
+
 /**
  * Content for Settings documents
  */
@@ -469,6 +664,71 @@ interface ShopDocumentData {
 export type ShopDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<ShopDocumentData>, "shop", Lang>;
 
+type StudiesDocumentDataSlicesSlice = StudiesSliceSlice;
+
+/**
+ * Content for Studies documents
+ */
+interface StudiesDocumentData {
+  /**
+   * Slice Zone field in *Studies*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<StudiesDocumentDataSlicesSlice> /**
+   * Meta Description field in *Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: studies.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Studies*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+
+  /**
+   * Meta Title field in *Studies*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: studies.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_title: prismic.KeyTextField;
+}
+
+/**
+ * Studies document from Prismic
+ *
+ * - **API ID**: `studies`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type StudiesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<StudiesDocumentData>,
+    "studies",
+    Lang
+  >;
+
 type WorkDocumentDataSlicesSlice = WorkSliceSlice;
 
 /**
@@ -533,11 +793,15 @@ export type WorkDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | AboutDocument
   | ArtDocument
+  | CommissionsDocument
   | ContactDocument
+  | CoversDocument
   | FeaturedartDocument
   | HomepageDocument
+  | PotraitsDocument
   | SettingsDocument
   | ShopDocument
+  | StudiesDocument
   | WorkDocument;
 
 /**
@@ -776,6 +1040,86 @@ export type ArtSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *CommissionSlice → Primary*
+ */
+export interface CommissionSliceSliceDefaultPrimary {
+  /**
+   * Home Text field in *CommissionSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commission_slice.primary.home_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_text: prismic.KeyTextField;
+
+  /**
+   * Shop Text field in *CommissionSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commission_slice.primary.shop_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  shop_text: prismic.KeyTextField;
+
+  /**
+   * Title field in *CommissionSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commission_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *CommissionSlice → Items*
+ */
+export interface CommissionSliceSliceDefaultItem {
+  /**
+   * Image field in *CommissionSlice → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: commission_slice.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for CommissionSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CommissionSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CommissionSliceSliceDefaultPrimary>,
+  Simplify<CommissionSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *CommissionSlice*
+ */
+type CommissionSliceSliceVariation = CommissionSliceSliceDefault;
+
+/**
+ * CommissionSlice Shared Slice
+ *
+ * - **API ID**: `commission_slice`
+ * - **Description**: CommissionSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CommissionSliceSlice = prismic.SharedSlice<
+  "commission_slice",
+  CommissionSliceSliceVariation
+>;
+
+/**
  * Primary content in *ContactSlice → Primary*
  */
 export interface ContactSliceSliceDefaultPrimary {
@@ -893,6 +1237,86 @@ type ContactSliceSliceVariation = ContactSliceSliceDefault;
 export type ContactSliceSlice = prismic.SharedSlice<
   "contact_slice",
   ContactSliceSliceVariation
+>;
+
+/**
+ * Primary content in *CoverSlice → Primary*
+ */
+export interface CoverSliceSliceDefaultPrimary {
+  /**
+   * Home Text field in *CoverSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cover_slice.primary.home_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_text: prismic.KeyTextField;
+
+  /**
+   * Shop Text field in *CoverSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cover_slice.primary.shop_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  shop_text: prismic.KeyTextField;
+
+  /**
+   * Title field in *CoverSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cover_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *CoverSlice → Items*
+ */
+export interface CoverSliceSliceDefaultItem {
+  /**
+   * Image field in *CoverSlice → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: cover_slice.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for CoverSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CoverSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CoverSliceSliceDefaultPrimary>,
+  Simplify<CoverSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *CoverSlice*
+ */
+type CoverSliceSliceVariation = CoverSliceSliceDefault;
+
+/**
+ * CoverSlice Shared Slice
+ *
+ * - **API ID**: `cover_slice`
+ * - **Description**: CoverSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CoverSliceSlice = prismic.SharedSlice<
+  "cover_slice",
+  CoverSliceSliceVariation
 >;
 
 /**
@@ -1058,6 +1482,86 @@ type HomeSliceVariation = HomeSliceDefault;
 export type HomeSlice = prismic.SharedSlice<"home", HomeSliceVariation>;
 
 /**
+ * Primary content in *PotraitSlice → Primary*
+ */
+export interface PotraitSliceSliceDefaultPrimary {
+  /**
+   * Home Text field in *PotraitSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potrait_slice.primary.home_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_text: prismic.KeyTextField;
+
+  /**
+   * Shop Text field in *PotraitSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potrait_slice.primary.shop_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  shop_text: prismic.KeyTextField;
+
+  /**
+   * Title field in *PotraitSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potrait_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *PotraitSlice → Items*
+ */
+export interface PotraitSliceSliceDefaultItem {
+  /**
+   * Image field in *PotraitSlice → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: potrait_slice.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for PotraitSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PotraitSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PotraitSliceSliceDefaultPrimary>,
+  Simplify<PotraitSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PotraitSlice*
+ */
+type PotraitSliceSliceVariation = PotraitSliceSliceDefault;
+
+/**
+ * PotraitSlice Shared Slice
+ *
+ * - **API ID**: `potrait_slice`
+ * - **Description**: PotraitSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PotraitSliceSlice = prismic.SharedSlice<
+  "potrait_slice",
+  PotraitSliceSliceVariation
+>;
+
+/**
  * Primary content in *ShopSlice → Primary*
  */
 export interface ShopSliceSliceDefaultPrimary {
@@ -1135,6 +1639,86 @@ type ShopSliceSliceVariation = ShopSliceSliceDefault;
 export type ShopSliceSlice = prismic.SharedSlice<
   "shop_slice",
   ShopSliceSliceVariation
+>;
+
+/**
+ * Primary content in *StudiesSlice → Primary*
+ */
+export interface StudiesSliceSliceDefaultPrimary {
+  /**
+   * Home Text field in *StudiesSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies_slice.primary.home_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  home_text: prismic.KeyTextField;
+
+  /**
+   * Shop Text field in *StudiesSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies_slice.primary.shop_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  shop_text: prismic.KeyTextField;
+
+  /**
+   * Title field in *StudiesSlice → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies_slice.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *StudiesSlice → Items*
+ */
+export interface StudiesSliceSliceDefaultItem {
+  /**
+   * Image field in *StudiesSlice → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: studies_slice.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for StudiesSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudiesSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<StudiesSliceSliceDefaultPrimary>,
+  Simplify<StudiesSliceSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *StudiesSlice*
+ */
+type StudiesSliceSliceVariation = StudiesSliceSliceDefault;
+
+/**
+ * StudiesSlice Shared Slice
+ *
+ * - **API ID**: `studies_slice`
+ * - **Description**: StudiesSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StudiesSliceSlice = prismic.SharedSlice<
+  "studies_slice",
+  StudiesSliceSliceVariation
 >;
 
 /**
@@ -1303,19 +1887,31 @@ declare module "@prismicio/client" {
       ArtDocument,
       ArtDocumentData,
       ArtDocumentDataSlicesSlice,
+      CommissionsDocument,
+      CommissionsDocumentData,
+      CommissionsDocumentDataSlicesSlice,
       ContactDocument,
       ContactDocumentData,
       ContactDocumentDataSlicesSlice,
+      CoversDocument,
+      CoversDocumentData,
+      CoversDocumentDataSlicesSlice,
       FeaturedartDocument,
       FeaturedartDocumentData,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
+      PotraitsDocument,
+      PotraitsDocumentData,
+      PotraitsDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
       ShopDocument,
       ShopDocumentData,
       ShopDocumentDataSlicesSlice,
+      StudiesDocument,
+      StudiesDocumentData,
+      StudiesDocumentDataSlicesSlice,
       WorkDocument,
       WorkDocumentData,
       WorkDocumentDataSlicesSlice,
@@ -1329,20 +1925,40 @@ declare module "@prismicio/client" {
       ArtSliceSliceDefaultItem,
       ArtSliceSliceVariation,
       ArtSliceSliceDefault,
+      CommissionSliceSlice,
+      CommissionSliceSliceDefaultPrimary,
+      CommissionSliceSliceDefaultItem,
+      CommissionSliceSliceVariation,
+      CommissionSliceSliceDefault,
       ContactSliceSlice,
       ContactSliceSliceDefaultPrimary,
       ContactSliceSliceDefaultItem,
       ContactSliceSliceVariation,
       ContactSliceSliceDefault,
+      CoverSliceSlice,
+      CoverSliceSliceDefaultPrimary,
+      CoverSliceSliceDefaultItem,
+      CoverSliceSliceVariation,
+      CoverSliceSliceDefault,
       HomeSlice,
       HomeSliceDefaultPrimary,
       HomeSliceVariation,
       HomeSliceDefault,
+      PotraitSliceSlice,
+      PotraitSliceSliceDefaultPrimary,
+      PotraitSliceSliceDefaultItem,
+      PotraitSliceSliceVariation,
+      PotraitSliceSliceDefault,
       ShopSliceSlice,
       ShopSliceSliceDefaultPrimary,
       ShopSliceSliceDefaultItem,
       ShopSliceSliceVariation,
       ShopSliceSliceDefault,
+      StudiesSliceSlice,
+      StudiesSliceSliceDefaultPrimary,
+      StudiesSliceSliceDefaultItem,
+      StudiesSliceSliceVariation,
+      StudiesSliceSliceDefault,
       WorkSliceSlice,
       WorkSliceSliceDefaultPrimary,
       WorkSliceSliceDefaultItem,

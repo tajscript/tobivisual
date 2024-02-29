@@ -19,7 +19,7 @@
 }
 
 .dropdown__wrapper {
-    @apply flex flex-col bg-gray-300 py-2 px-5 gap-1 rounded-lg
+    @apply flex flex-col bg-gray-300 text-offblack py-2 px-5 gap-1 rounded-lg
 }
 
 .drop_link {
