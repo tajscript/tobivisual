@@ -158,8 +158,8 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       </div>
 
       <div className={style.footer__text}>
-      <p>©TOBI ADETIMEHIN</p>
-      <p>{slice.primary.scroll_text}</p>
+        <p>©TOBI ADETIMEHIN</p>
+        <p>{slice.primary.scroll_text}</p>
       </div>
 
       </div>
