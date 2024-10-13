@@ -4,14 +4,13 @@ import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import Link from "next/link";
-import CurrentTime from "@/components/currentTime";
 import { useLayoutEffect, useRef, useState } from "react";
 import FolioNav from "@/components/folioNav";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 
-import style from "@/styles/home.module.css"
+import style from "@/styles/home.module.css";
 
 
 /**
@@ -115,7 +114,6 @@ const Home = ({ slice }: HomeProps): JSX.Element => {
       <div className={style.home__wrapper} id="home">
       <nav className={style.nav}>
         <button onClick={handleNavOpen} className={style.nav__text}>{slice.primary.home_text}</button>
-          <div className={style.real__time}>NG, <span><CurrentTime /></span></div>
         <Link href="/shop" className={style.nav__text}>{slice.primary.shop_text}</Link>
       </nav>
 
